@@ -9,3 +9,17 @@ Students will be able to:
 - Build a schema
 - Save (INSERT) records to the database
 - Read (SELECT) records from the database
+
+## Resources:
+* [Databases Introduction](https://zenkit.com/en/blog/everything-you-need-to-know-about-web-databases/)
+* [SQL](https://sqlbolt.com/)
+* [SQL Practice](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all)
+* [SQL Sheetcheat](http://www.cheat-sheets.org/sites/sql.su/)
+* [What is CRUD](https://youtu.be/iNkspbIfcic)
+* [REST vs CRUD](https://www.logicmonitor.com/blog/rest-vs-crud)
+
+### Keywords to search for:
+* Databases
+* SQL vs NoSQL
+* CRUD
+* Rest
