@@ -1,17 +1,5 @@
 # Class11:
 
-## Resources:
-* [The Internet in Simple Words](https://www.khanacademy.org/computing/ap-computer-science-principles/the-internet/x2d2f703b37b450a3:web-protocols/a/the-world-wide-web)
-* [URL](https://www.techtarget.com/searchnetworking/definition/URL)
-* [Network Protocol](https://www.comptia.org/content/guides/what-is-a-network-protocol)
-* [What is WRRC](https://medium.com/@jen_strong/the-request-response-cycle-of-the-web-1b7e206e9047)
-* [What is NodeJS](https://www.freecodecamp.org/news/what-exactly-is-node-js-ae36e97449f5/)
-* [What is ExpressJS](https://www.freecodecamp.org/news/express-explained-with-examples-installation-routing-middleware-and-more/)
-
-### Keywords to Search for: 
-* WRRC (Web Request Response Cycle)
-* Node JS
-* Express JS
 # Class 11 Guide
 
 The "Lecture Main Topics" section for each day can be used as a possible outline for a lecture. They're flows that have worked before, but feel free to deviate and do your own thing as fits your class.
