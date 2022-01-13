@@ -1,17 +1,5 @@
 # Class 12
 
-## Resources:
-* [Async vs sync](https://www.freecodecamp.org/news/synchronous-vs-asynchronous-in-javascript/)
-* [What is a Promise](https://www.freecodecamp.org/news/javascript-promises-explained/)
-* [An Introduction to REST APIs](https://www.easeout.co/blog/2021-11-09-an-introduction-to-rest-apis/)
-* [Axios Doc](https://www.npmjs.com/package/axios)
-
-### Keywords to Search for:
-* Async functions in Javascript
-* Promises
-* RESTful API
-* Axios
-
 The "Lecture Main Topics" section for each day can be used as a possible outline for a lecture. They're flows that have worked before, but feel free to deviate and do your own thing as fits your class.
 
 ## Overview of Today
