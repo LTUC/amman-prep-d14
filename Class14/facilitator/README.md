@@ -45,12 +45,3 @@ Some basic code review questions:
 Does it work? What part of this is confusing? What could make it more readable? What could have more explanation? What could be broken into smaller pieces? What would make this easier for others to understand. How could this be more performant? Are there 'red flags' (Experience: Things you don't do often. Why did they do that?) Are 'bad inputs' accounted for? Are there missing test cases? Is it documented?
 
 I found the best code reviews consisted of the students describing their code to each other, explaining why they choose those methods, and even helping teach the subjects of the labs.
-
-## Resources:
-* [HTTP response status codes](https://thecontentworks.uk/http-status-codes-cheat-sheet/)
-* [Status Code to Use for Every CRUD App](https://www.moesif.com/blog/technical/api-design/Which-HTTP-Status-Code-To-Use-For-Every-CRUD-App/)
-* [req.params, req.query and req.body](https://dev.to/gathoni/express-req-params-req-query-and-req-body-4lpc)
-
-### Keywords to search for:
-* HTTP Status Codes
-* Update and Delete in CRUD
