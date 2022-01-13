@@ -7,3 +7,11 @@ Students will be able to:
 - Declare variables and knowing the difference between data types.
 - Learn about the Comparison operators and Logical operators.
 - Use Conditional Statements.
+
+
+## Resources:
+
+- (JavaScript MDN)[https://developer.mozilla.org/en-US/docs/Web/JavaScript?retiredLocale=ar]
+- (The Modern JavaScript Tutorial)[https://javascript.info/]
+- (JavaScript w3schools)[https://www.w3schools.com/js/default.asp]
+
