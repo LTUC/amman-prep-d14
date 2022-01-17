@@ -11,10 +11,10 @@ You will continue building on what you achieved in the **Lab 16**.
 
 - Create new branch called class-17 then start your work by using this command **git checkout -b class17**
 
-- Your yo organize your file structure to be as below - it just related to src folder the rest folder should not be Edited .
+- You have to organize your file structure to be as below - it just related to src folder the rest folder should not be Edited .
 
 ```
-.
+
 ├── App.css
 ├── App.js
 ├── components
@@ -24,6 +24,12 @@ You will continue building on what you achieved in the **Lab 16**.
 │   ├── TourDetails
 │   │   ├── TourDetails.css
 │   │   └── TourDetails.js
+│   ├── footer
+│   │   ├── Footer.css
+│   │   └── Footer.js
+│   ├── header
+│   │   ├── Header.css
+│   │   └── Header.js
 │   ├── home
 │   │   ├── Home.css
 │   │   └── Home.js
@@ -38,6 +44,7 @@ You will continue building on what you achieved in the **Lab 16**.
 ├── index.css
 └── index.js
 ```
+
 
 - You have to create two new components.
     - Tour
