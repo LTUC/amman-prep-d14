@@ -1,7 +1,7 @@
 # Lab 01 : 
 
 ## Overview:
-Today you will start setting things up bu creating Github account.
+Today you will start setting things up by creating Github account.
 
 ## Requirements:
 
