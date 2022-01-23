@@ -330,6 +330,6 @@
 
 ## Resources:
 
-- (JavaScript MDN)[https://developer.mozilla.org/en-US/docs/Web/JavaScript?retiredLocale=ar]
-- (The Modern JavaScript Tutorial)[https://javascript.info/]
-- (JavaScript w3schools)[https://www.w3schools.com/js/default.asp]
+- [JavaScript MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript?retiredLocale=ar)
+- [The Modern JavaScript Tutorial](https://javascript.info/)
+- [JavaScript w3schools](https://www.w3schools.com/js/default.asp)
