@@ -136,8 +136,12 @@ Date objects, Array objects, and Person objects inherit from Object.prototype.
 ## Code Examples
 
 [slides](https://docs.google.com/presentation/d/1EFzK-kLVjU0kpvV0vDkANIT11pGwVKXVqOLdqvywHRc/edit?usp=sharing)  
-[obj-constructorDemo](./Demo/preDemo)
-[Demo](./Demo)
+
+
+[obj-constructorDemo](./demo/preDemo.js)
+
+
+[demo](./.demo/../demo/index.html)
 
 ## How do I prep for today?
 
