@@ -114,7 +114,7 @@ function handleForm(e){
 
 ## Code Examples
 
-[Demo](./Demo)
+[demo](./demo/index.html)
 
 ## How do I prep for today?
 
