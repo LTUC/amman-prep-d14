@@ -65,19 +65,6 @@ Today's lecture will teach students recursion and call stack, pass by value and 
 - Prepare a walk through of the directory structure for this lab
 - Prepare a demo of testing.
 
-## Lecture Main Topics
-
-- What is Routing and how to use it?
-
-
-- conditional rendering , when and how to use it .
-
-- when do we need passing props as function , and how to it correctly .
-
-- handling events in a correct wat and the students should know that the way of doing events in react different than vanilla js 
-
-  explain what is state and life-cycle (useState) and how to use it.
-
 
 ## What might students struggle with today?
 
