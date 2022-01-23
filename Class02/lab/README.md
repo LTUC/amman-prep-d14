@@ -34,7 +34,7 @@ The following information should be provided in your wireframe:
    - Add README.md file to your repository.
    - Clone the repository to your local machine.
    - Create a branch called  **“wireframe”**.
-   - add the wireframe image to to the ReadMe file 
+   - add the wireframe image to to the README file 
    - Do **A-C-P** 
    - Create a new pull request then merge it.
 
