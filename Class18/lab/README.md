@@ -13,6 +13,12 @@ You are building a Netflix Clone application, where you can list a set of movies
 
 ### **Requirements**
 
+**Set up your Github Repository:**
+   - Create new repo called `Netflix-Clone`.
+   - Checkout a new branch called `class-18` for today's task.
+   - Open it in VS code.
+
+
 - Use this [Cheatsheet](https://drive.google.com/file/d/14VoN5f9mnLZ43t5kayttvbUWCYecxyLd/view) to create your project.
 - API: https://developers.themoviedb.org/3
 
@@ -50,5 +56,11 @@ You are building a Netflix Clone application, where you can list a set of movies
     - When you click add to the favorite button you should store the data that you have from the Modal in your Database, using this endpoint(‘/addMovie’) from Lab13.
 
 
-
+## Submission Instructions:
+- When your work is complete and ready for submission, push to the `class-18` branch.
+- Create a pull request.
+- Submit the pull request link.
+- Merge `class-18` with the main branch.
+- What observations or questions do you have about what you’ve learned so far?
+- How long did it take you to complete this assignment? And, before you started, how long did you think it would take you to complete this assignment?
 
