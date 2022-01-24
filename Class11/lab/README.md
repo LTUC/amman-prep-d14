@@ -85,9 +85,9 @@ Movies-Library
 
 
 ## Submission Instructions:
-- When your work is complete and ready for submission, push to the `Task11` branch.
+- When your work is complete and ready for submission, push to the `Lab11` branch.
 - Create a pull request.
 - Submit the pull request link.
-- Merge `Task11` with the main branch.
+- Merge `Lab11` with the main branch.
 - What observations or questions do you have about what you’ve learned so far?
 - How long did it take you to complete this assignment? And, before you started, how long did you think it would take you to complete this assignment?
