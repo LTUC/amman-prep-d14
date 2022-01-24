@@ -281,3 +281,7 @@
 * URL and IP addresses
 * HTTP
 * HTML
+
+
+### Understand the principles of creating an effective web page.
+    It is mean how to use semantic tags, the structure of page itself, styling, content that gives meaning, names of the id/classes and the importance of meta tags in the head
