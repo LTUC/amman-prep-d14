@@ -283,5 +283,8 @@
 * HTML
 
 
-### Understand the principles of creating an effective web page.
-    It is mean how to use semantic tags, the structure of page itself, styling, content that gives meaning, names of the id/classes and the importance of meta tags in the head
+### Understand the principles of creating an effective web page:
+  It is mean how to use semantic tags, the structure of page itself, styling, content that gives meaning, names of the id/classes and the importance of meta tags in the head
+- planning before writing code
+- to make it simple and easy to use
+- understand there are best practices to write HTML with(header main body )
