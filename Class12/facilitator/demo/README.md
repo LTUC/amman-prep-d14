@@ -13,24 +13,27 @@ npm install axios dotenv
 ```javascript
 const axios = require('axios');
 ```
-3. Instead of reading from local JSON file you should send a get request to the [API](http://alpha-meme-maker.herokuapp.com/) and reformat the data in the constructor then return the response as json
+3. Instead of reading from local JSON file you should send a get request to the [API](https://zoo-animal-api.herokuapp.com/) and reformat the data in the constructor then return the response as json
 
 ```javascript
 
-function memesHandler(req , res){
-    let memes = []
+function AnimalFactsHandler(req , res){
+    let facts = []
     
-    axios.get('http://alpha-meme-maker.herokuapp.com/')
+    axios.get('https://zoo-animal-api.herokuapp.com/animals/rand/10')
     .then(result => {
-        result.data.data.map(meme => {
-            let oneMeme = new Meme(meme.ID, meme.name, meme.image, meme.tags,meme.topText)
-            console.log(oneMeme);
-            memes.push(oneMeme);
+        result.data.map(fact => {
+            let oneFact = new AnimalFact(fact.id, fact.name, fact.image_link, fact.animal_type, fact.length_min, fact.length_max, fact.habitat, fact.diet);
+            console.log(oneFact);
+            facts.push(oneFact);
         })
-        return res.status(200).json(memes);
+        return res.status(200).json(facts);
     })
-    .catch(error => errorHandler(error,req,res))
+    .catch(error => {
+        errorHandler(error, req,res);
+    })
 }
+
 ```
 
 4. Build a function to handel errors 
@@ -47,26 +50,25 @@ function errorHandler(error,req,res){
 }
 ```
 
-5. The Memes API is supporting pagination so lets make our api do that in another end point (you will use query):
+5. The Animal facts API is giving you the ability to control the number of returned results so lets make our api do that in another end point (you will use query):
 
 ```javascript
-app.get('/memesPage/', memesPageHandler)
+app.get('/factsNum', factsNumHandler);
 
 
-
-function memesPageHandler(req, res){
+function factsNumHandler(req, res){
     try{
-        console.log(req.query.page);
-        let memes = []
-        let pageNum = req.query.page;
-        axios.get(`http://alpha-meme-maker.herokuapp.com/${pageNum}`)
+        console.log(req.query.number);
+        let facts = []
+        let factNum = req.query.number;
+        axios.get(`https://zoo-animal-api.herokuapp.com/animals/rand/${factNum}/`)
         .then(result => {
-            result.data.data.map(meme => {
-                let oneMeme = new Meme(meme.ID, meme.name, meme.image, meme.tags,meme.topText)
-                console.log(oneMeme);
-                memes.push(oneMeme);
+            result.data.map(fact => {
+                let oneFact = new AnimalFact(fact.id, fact.name, fact.image_link, fact.animal_type, fact.length_min, fact.length_max, fact.habitat, fact.diet);
+                console.log(oneFact);
+                facts.push(oneFact);
             })
-            return res.status(200).json(memes);
+            return res.status(200).json(facts);
         })
         .catch(error => {
             errorHandler(error, req,res);
