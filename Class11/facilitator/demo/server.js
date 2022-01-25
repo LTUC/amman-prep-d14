@@ -12,31 +12,34 @@ app.use(cors());
 
 app.get('/', helloWorldHandler);
 
-app.get('/memes', memesHandler);
+app.get('/facts', AnimalFactsHandler);
 
 app.use('*', notFoundHandler);
 
 
-function Meme(id, name, image, tag, topText){
+function AnimalFact(id, name, image_link, animal_type, length_min, length_max, habitat, diet){
     this.id = id;
     this.name = name;
-    this.image = image;
-    this.tag = tag;
-    this.topText = topText;
+    this.image_link = image_link;
+    this.animal_type = animal_type;
+    this.length_min = length_min;
+    this.length_max = length_max;
+    this.habitat = habitat;
+    this.diet = diet;
 }
 
 function helloWorldHandler(req , res){
     return res.status(200).send("Hello World");
 }
 
-function memesHandler(req , res){
-    let memes = []
-    data.data.map(meme => {
-        let oneMeme = new Meme(meme.ID, meme.name, meme.image, meme.tags, meme.topText);
-        memes.push(oneMeme);
+function AnimalFactsHandler(req , res){
+    let facts = []
+    data.data.map(fact => {
+        let oneFact = new AnimalFact(fact.id, fact.name, fact.image_link, fact.animal_type, fact.length_min, fact.length_max, fact.habitat, fact.diet);
+        facts.push(oneFact);
     })
 
-    return res.status(200).json(memes);
+    return res.status(200).json(facts);
 }
 
 function notFoundHandler(request,response) { 
