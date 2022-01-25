@@ -14,7 +14,7 @@ npm install pg body-parser
 ```javascript
 const pg = require('pg');
 ```
-3. Create a local database after connecting to the Postgres server by implemnting the following SQL line:
+3. Create a local database after connecting to the Postgres server by implementing the following SQL line:
 
 ```sql
 CREATE DATABASE demo 
@@ -45,14 +45,17 @@ client.connect()
 7. Create an SQL file called schema.sql to create the database table:
 
 ```sql
-DROP TABLE IF EXISTS favMeme;
+DROP TABLE IF EXISTS favAnimalFact;
 
-CREATE TABLE IF NOT EXISTS favMeme (
+CREATE TABLE IF NOT EXISTS favAnimalFact (
     id SERIAL PRIMARY KEY,
-    memeName VARCHAR(255),
-    memeImage VARCHAR(255),
-    tags VARCHAR(255),
-    topText VARCHAR(255),
+    name VARCHAR(255),
+    factImage VARCHAR(255),
+    animalType VARCHAR(255),
+    minLength float(8),
+    maxLength float(8),
+    habitat VARCHAR(255),
+    diet VARCHAR(255),
     comment VARCHAR(255)
 );
 ```
@@ -74,34 +77,33 @@ var jsonParser = bodyParser.json();
 10. Create and end point that take a post request to add a specific meme to the database:
 
 ```javascript
-app.post('/addFavMeme' ,jsonParser, addFavMemeHandler)
+app.post('/addFavFact' ,jsonParser, addFavFactHandler);
 
+function addFavFactHandler(req, res){
+    const fact = req.body;
+    console.log(fact);
+    const sql = `INSERT INTO favanimalfact(name, factImage, animalType, minLength, maxLength, habitat, diet, comment) VALUES($1, $2, $3, $4, $5, $6, $7, $8) RETURNING *;`
 
-function addFavMemeHandler(req, res){
-    const meme = req.body;
-    console.log(meme);
-    const sql = `INSERT INTO favmeme(memeName, memeImage, tags, topText, comment) VALUES($1, $2, $3, $4, $5) RETURNING *;`
-
-    const values = [meme.name,meme.image, meme.tags, meme.topText, meme.comment];
-
+    const values = [fact.name, fact.image_link, fact.animal_type, fact.length_min, fact.length_max, fact.habitat, fact.diet, fact.comment];
     client.query(sql,values).then((data) => {
-        res.status(200).json(data.rows);
+        res.status(201).json(data.rows);
     })
     .catch(error => {
-            errorHandler(error, req,res);
-        });
-}
+        console.log(error);
+        errorHandler(error, req,res);
+    });
+};
 ```
 
-11. Create an end point that take a get request and return all favourite memes from database:
+11. Create an end point that take a get request and return all favorite facts from database:
 
 ```javascript
-app.get('/favmeme', getFavMemesHandler);
+app.get('/favFact', getFavFactsHandler);
 
 
-function getFavMemesHandler(req, res){
+function getFavFactsHandler(req, res){
 
-    const sql = `SELECT * FROM favmeme`;
+    const sql = `SELECT * FROM favanimalfact`;
 
     client.query(sql).then(data => {
         return res.status(200).json(data.rows);
@@ -109,5 +111,5 @@ function getFavMemesHandler(req, res){
     .catch(error => {
         errorHandler(error, req,res);
     });
-}
+};
 ```
