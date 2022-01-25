@@ -8,15 +8,15 @@ You will continue building on the last classes demos.
 Today you will build and end point for get, update and delete a specific record.
 
 
-1. Create an end point that take a get request with a specific id as params and return the details for the meme which has the same id:
+1. Create an end point that take a get request with a specific id as params and return the details for the fact which has the same id:
 
 ```javascript
-app.get('/favmeme/:id', getFavMemeHandler);
+app.get('/favFact/:id', getFavFactHandler);
 
-function getFavMemeHandler(req,res){
+function getFavFactHandler(req,res){
     const id = req.params.id;
 
-    const sql = `SELECT * FROM favmeme WHERE id = ${id}`;
+    const sql = `SELECT * FROM favanimalfact WHERE id = ${id}`;
 
     client.query(sql).then(data => {
         return res.status(200).json(data.rows);
@@ -27,39 +27,40 @@ function getFavMemeHandler(req,res){
 };
 ```
 
-2. Create an end point that take a put request with a specific id as params and return the details for the meme which has the same id:
+2. Create an end point that take a put request with a specific id as params and return the details for the fact which has the same id:
 
 ```javascript
-app.put('/updateFavMeme/:id', jsonParser,updateFavMemeHandler );
+app.put('/updateFavFact/:id', jsonParser,updateFavFactHandler);
 
 
-function updateFavMemeHandler(req, res){
+function updateFavFactHandler(req, res){
     const id = req.params.id;
-    const meme = req.body;
+    const fact = req.body;
 
-    const sql = `UPDATE favmeme SET memeName=$1, memeImage=$2, tags=$3, topText=$4, comment=$5 WHERE id=${id} RETURNING *;`;
-    const values = [meme.name, meme.image, meme.tags, meme.topText, meme.comment];
+    const sql = `UPDATE favanimalfact SET name=$1, factImage=$2, animalType=$3, minLength=$4, maxLength=$5, habitat=$6, diet=$7, comment=$8 WHERE id=${id} RETURNING *;`;
+    const values = [fact.name, fact.image_link, fact.animal_type, fact.length_min, fact.length_max, fact.habitat, fact.diet, fact.comment];
 
     client.query(sql, values).then(data => {
         return res.status(200).json(data.rows);
         // or you can send 204 status with no content
         // return res.status(200).json(data.rows);
     }).catch( err => {
+        console.log(err);
         errorHandler(err,req,res);
     });
 
-}
+};
 ```
 
 3. Create and end point that take a delete request and delete the record from database:
 
 ```javascript
-app.delete('/deleteFavMeme/:id', deleteFavMemeHandler);
+app.delete('/deleteFavFact/:id', deleteFavFactHandler);
 
-function deleteFavMemeHandler(req , res){
+function deleteFavFactHandler(req , res){
     const id = req.params.id;
 
-    const sql = `DELETE FROM favmeme WHERE id=${id};`;
+    const sql = `DELETE FROM favanimalfact WHERE id=${id};`;
 
     client.query(sql).then(() => {
         return res.status(204).json({});

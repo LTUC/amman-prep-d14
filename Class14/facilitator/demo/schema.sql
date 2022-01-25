@@ -1,10 +1,13 @@
-DROP TABLE IF EXISTS favmeme;
+DROP TABLE IF EXISTS favAnimalFact;
 
-CREATE TABLE IF NOT EXISTS favmeme (
+CREATE TABLE IF NOT EXISTS favAnimalFact (
     id SERIAL PRIMARY KEY,
-    memeName VARCHAR(255),
-    memeImage VARCHAR(255),
-    tags VARCHAR(255),
-    topText VARCHAR(255),
+    name VARCHAR(255),
+    factImage VARCHAR(255),
+    animalType VARCHAR(255),
+    minLength float(8),
+    maxLength float(8),
+    habitat VARCHAR(255),
+    diet VARCHAR(255),
     comment VARCHAR(255)
 );
