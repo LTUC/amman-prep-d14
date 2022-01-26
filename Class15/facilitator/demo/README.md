@@ -7,7 +7,7 @@
 - Connect it to your GitHub repo
 - Enable automatic deployment
 
-**Step 2:** Go to the ‘resources’ tab
+**Step 2:** Go to the ‘Resources’ tab
 
 **Step 3:** Search for Heroku Postgresql
 - Add the free version
@@ -15,6 +15,7 @@
 **Step 4:** Go to the settings tab
 - Click on the ‘reveal config vars’
 - You should see a config variable called DATABASE_URL with some postgres url that Heroku is giving you
+- Add new one for the APIKEY
 
 **Step 5:** In your terminal, run your schema on your Heroku database by doing the following:
 - Navigate to where your schema file lives
