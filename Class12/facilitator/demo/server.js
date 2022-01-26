@@ -48,7 +48,7 @@ function recipesHandler(req , res){
     axios.get(`https://api.spoonacular.com/recipes/random?apiKey=${apiKey}&number=${numberOfReturnedData}`)
     .then(result => {
         result.data.recipes.map(recipe => {
-            let oneRecipe = new Recipe(recipe.id, recipe.title || '', recipe.readyInMinutes || '', recipe.summary || '', recipe.vegetarian || '', recipe.instructions || '', recipe.sourceUrl || '', recipe.image || '');
+            let oneRecipe = new Recipe(recipe.id, recipe.title || '', recipe.readyInMinutes || '', recipe.summary || '', recipe.vegetarian, recipe.instructions || '', recipe.sourceUrl || '', recipe.image || '');
             recipes.push(oneRecipe);
         })
         return res.status(200).json(recipes);
@@ -67,7 +67,7 @@ function searchRecipesHandler(req, res){
         axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&query=${query}/`)
         .then(result => {
             result.data.results.map(recipe => {
-                let oneRecipe = new Recipe(recipe.id, recipe.title || '', recipe.readyInMinutes || '', recipe.summary || '', recipe.vegetarian || '', recipe.instructions || '', recipe.sourceUrl || '', recipe.image || '');
+                let oneRecipe = new Recipe(recipe.id, recipe.title || '', recipe.readyInMinutes || '', recipe.summary || '', recipe.vegetarian, recipe.instructions || '', recipe.sourceUrl || '', recipe.image || '');
                 recipes.push(oneRecipe);
             })
             return res.status(200).json(recipes);
