@@ -1,13 +1,13 @@
-DROP TABLE IF EXISTS favAnimalFact;
+DROP TABLE IF EXISTS favRecipes;
 
-CREATE TABLE IF NOT EXISTS favAnimalFact (
+CREATE TABLE IF NOT EXISTS favRecipes (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(255),
-    factImage VARCHAR(255),
-    animalType VARCHAR(255),
-    minLength float(8),
-    maxLength float(8),
-    habitat VARCHAR(255),
-    diet VARCHAR(255),
+    title VARCHAR(255),
+    readyInMinutes INTEGER,
+    summary VARCHAR(10000),
+    vegetarian BOOLEAN,
+    instructions VARCHAR(10000),
+    sourceUrl VARCHAR(255),
+    image VARCHAR(255),
     comment VARCHAR(255)
 );

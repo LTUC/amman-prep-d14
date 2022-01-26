@@ -45,17 +45,17 @@ client.connect()
 7. Create an SQL file called schema.sql to create the database table:
 
 ```sql
-DROP TABLE IF EXISTS favAnimalFact;
+DROP TABLE IF EXISTS favRecipes;
 
-CREATE TABLE IF NOT EXISTS favAnimalFact (
+CREATE TABLE IF NOT EXISTS favRecipes (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(255),
-    factImage VARCHAR(255),
-    animalType VARCHAR(255),
-    minLength float(8),
-    maxLength float(8),
-    habitat VARCHAR(255),
-    diet VARCHAR(255),
+    title VARCHAR(255),
+    readyInMinutes INTEGER,
+    summary VARCHAR(10000),
+    vegetarian BOOLEAN,
+    instructions VARCHAR(10000),
+    sourceUrl VARCHAR(255),
+    image VARCHAR(255),
     comment VARCHAR(255)
 );
 ```
@@ -74,17 +74,17 @@ var jsonParser = bodyParser.json();
 
 ```
 
-10. Create and end point that take a post request to add a specific meme to the database:
+10. Create an end point that take a post request to add a specific recipe to the database:
 
 ```javascript
-app.post('/addFavFact' ,jsonParser, addFavFactHandler);
+app.post('/addFavRecipe' ,jsonParser, addFavRecipeHandler);
 
-function addFavFactHandler(req, res){
-    const fact = req.body;
-    console.log(fact);
-    const sql = `INSERT INTO favanimalfact(name, factImage, animalType, minLength, maxLength, habitat, diet, comment) VALUES($1, $2, $3, $4, $5, $6, $7, $8) RETURNING *;`
+function addFavRecipeHandler(req, res){
+    const recipe = req.body;
+    console.log(recipe);
+    const sql = `INSERT INTO favRecipes(title, readyInMinutes, summary, vegetarian, instructions, sourceUrl, image, comment) VALUES($1, $2, $3, $4, $5, $6, $7, $8) RETURNING *;`
 
-    const values = [fact.name, fact.image_link, fact.animal_type, fact.length_min, fact.length_max, fact.habitat, fact.diet, fact.comment];
+    const values = [recipe.title, recipe.readyInMinutes, recipe.summary, recipe.vegetarian, recipe.instructions, recipe.sourceUrl, recipe.image, recipe.comment];
     client.query(sql,values).then((data) => {
         res.status(201).json(data.rows);
     })
@@ -95,15 +95,15 @@ function addFavFactHandler(req, res){
 };
 ```
 
-11. Create an end point that take a get request and return all favorite facts from database:
+11. Create an end point that take a get request and return all favorite recipes from database:
 
 ```javascript
-app.get('/favFact', getFavFactsHandler);
+app.get('/favRecipes', getFavRecipesHandler);
 
 
-function getFavFactsHandler(req, res){
+function getFavRecipesHandler(req, res){
 
-    const sql = `SELECT * FROM favanimalfact`;
+    const sql = `SELECT * FROM favRecipes`;
 
     client.query(sql).then(data => {
         return res.status(200).json(data.rows);
