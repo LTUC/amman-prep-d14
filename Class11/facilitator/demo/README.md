@@ -58,25 +58,28 @@ function helloWorldHandler(req, res){
 
 ```javascript
 const data = require('./data.json');
-app.get('/facts', AnimalFactsHandler);
-function AnimalFact(id, name, image_link, animal_type, length_min, length_max, habitat, diet){
+
+app.get('/recipes', recipesHandler);
+
+function Recipe(id, title, readyInMinutes, summary, vegetarian, instructions, sourceUrl, image){
     this.id = id;
-    this.name = name;
-    this.image_link = image_link;
-    this.animal_type = animal_type;
-    this.length_min = length_min;
-    this.length_max = length_max;
-    this.habitat = habitat;
-    this.diet = diet;
+    this.title = title;
+    this.readyInMinutes = readyInMinutes;
+    this.summary = summary;
+    this.vegetarian = vegetarian;
+    this.instructions = instructions;
+    this.sourceUrl = sourceUrl;
+    this.image = image;
 }
-function AnimalFactsHandler(req , res){
-    let facts = []
-    data.data.map(fact => {
-        let oneFact = new AnimalFact(fact.id, fact.name, fact.image_link, fact.animal_type, fact.length_min, fact.length_max, fact.habitat, fact.diet);
-        facts.push(oneFact);
+
+function recipesHandler(req , res){
+    let recipes = []
+    data.data.map(recipe => {
+        let oneRecipe = new Recipe(recipe.id, recipe.title, recipe.readyInMinutes, recipe.summary, recipe.vegetarian, recipe.instructions, recipe.sourceUrl, recipe.image);
+        recipes.push(oneRecipe);
     })
 
-    return res.status(200).json(facts);
+    return res.status(200).json(recipes);
 }
 ```
 10. Handel `"Not Found"` end points 
