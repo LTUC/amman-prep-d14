@@ -14,7 +14,7 @@ console.log(person)
 // {name: "Jane Doe", age: 27, gender: "male"}
 
 
-// Pass by Value:
+// Pass by Reference Example2:
 let workDays = ["Sunday", "Monday", "Tuesday"]
 
 let newDays = workDays
@@ -23,4 +23,13 @@ newDays.push("Wednesday")
 console.log(newDays)
 //["Sunday", "Monday", "Tuesday", "Wednesday"]
 console.log(workDays)
-// ["Sunday", "Monday", "Tuesday"]
+//["Sunday", "Monday", "Tuesday", "Wednesday"]
+
+// Pass by value:
+let greeting = "Hello";
+
+let newGreeting = "Hello From Jordan";
+
+console.log(greeting); // "Hello"
+
+console.log(newGreeting); // 
