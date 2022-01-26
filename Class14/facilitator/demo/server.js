@@ -16,6 +16,8 @@ app.use(cors());
 
 const PORT = process.env.PORT;
 
+const apiKey = process.env.APIKEY;
+
 const client = new pg.Client(process.env.DATABASE_URL);
 
 var bodyParser = require('body-parser');
@@ -23,33 +25,33 @@ var jsonParser = bodyParser.json();
 
 app.get('/', helloWorldHandler);
 
-app.get('/facts', AnimalFactsHandler);
+app.get('/recipes', recipesHandler);
 
-app.get('/factsNum', factsNumHandler);
+app.get('/searchRecipes', searchRecipesHandler);
 
-app.post('/addFavFact' ,jsonParser, addFavFactHandler);
+app.post('/addFavRecipe' ,jsonParser, addFavRecipeHandler);
 
-app.get('/favFact', getFavFactsHandler);
+app.get('/favRecipes', getFavRecipesHandler);
 
-app.get('/favFact/:id', getFavFactHandler);
+app.get('/favRecipe/:id', getFavRecipeHandler);
 
-app.put('/updateFavFact/:id', jsonParser,updateFavFactHandler);
+app.put('/updateFavRecipe/:id', jsonParser,updateFavRecipeHandler);
 
-app.delete('/deleteFavFact/:id', deleteFavFactHandler);
+app.delete('/deleteFavRecipe/:id', deleteFavRecipeHandler);
 
 app.use('*', notFoundHandler);
 
 app.use(errorHandler)
 
-function AnimalFact(id, name, image_link, animal_type, length_min, length_max, habitat, diet){
+function Recipe(id, title, readyInMinutes, summary, vegetarian, instructions, sourceUrl, image){
     this.id = id;
-    this.name = name;
-    this.image_link = image_link;
-    this.animal_type = animal_type;
-    this.length_min = length_min;
-    this.length_max = length_max;
-    this.habitat = habitat;
-    this.diet = diet;
+    this.title = title;
+    this.readyInMinutes = readyInMinutes;
+    this.summary = summary;
+    this.vegetarian = vegetarian;
+    this.instructions = instructions;
+    this.sourceUrl = sourceUrl;
+    this.image = image;
 }
 
 
@@ -58,38 +60,38 @@ function helloWorldHandler(req , res){
     return res.status(200).send("Hello World");
 }
 
-function AnimalFactsHandler(req , res){
-    let facts = []
-    
-    axios.get('https://zoo-animal-api.herokuapp.com/animals/rand/10')
+function recipesHandler(req , res){
+    let recipes = []
+    let numberOfReturnedData = 10; // 1 ==> 100
+    axios.get(`https://api.spoonacular.com/recipes/random?apiKey=${apiKey}&number=${numberOfReturnedData}`)
     .then(result => {
-        result.data.map(fact => {
-            let oneFact = new AnimalFact(fact.id, fact.name, fact.image_link, fact.animal_type, fact.length_min, fact.length_max, fact.habitat, fact.diet);
-            console.log(oneFact);
-            facts.push(oneFact);
+        result.data.recipes.map(recipe => {
+            let oneRecipe = new Recipe(recipe.id, recipe.title || '', recipe.readyInMinutes || '', recipe.summary || '', recipe.vegetarian , recipe.instructions || '', recipe.sourceUrl || '', recipe.image || '');
+            recipes.push(oneRecipe);
         })
-        return res.status(200).json(facts);
+        return res.status(200).json(recipes);
     })
     .catch(error => {
+        
         errorHandler(error, req,res);
     })
 }
 
-function factsNumHandler(req, res){
+function searchRecipesHandler(req, res){
     try{
-        console.log(req.query.number);
-        let facts = []
-        let factNum = req.query.number;
-        axios.get(`https://zoo-animal-api.herokuapp.com/animals/rand/${factNum}/`)
+        console.log(req.query.search);
+        let recipes = []
+        let query = req.query.search;
+        axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&query=${query}/`)
         .then(result => {
-            result.data.map(fact => {
-                let oneFact = new AnimalFact(fact.id, fact.name, fact.image_link, fact.animal_type, fact.length_min, fact.length_max, fact.habitat, fact.diet);
-                console.log(oneFact);
-                facts.push(oneFact);
+            result.data.results.map(recipe => {
+                let oneRecipe = new Recipe(recipe.id, recipe.title || '', recipe.readyInMinutes || '', recipe.summary || '', recipe.vegetarian , recipe.instructions || '', recipe.sourceUrl || '', recipe.image || '');
+                recipes.push(oneRecipe);
             })
-            return res.status(200).json(facts);
+            return res.status(200).json(recipes);
         })
         .catch(error => {
+            console.log(error);
             errorHandler(error, req,res);
         });
 
@@ -100,12 +102,12 @@ function factsNumHandler(req, res){
     }
 }
 
-function addFavFactHandler(req, res){
-    const fact = req.body;
-    console.log(fact);
-    const sql = `INSERT INTO favanimalfact(name, factImage, animalType, minLength, maxLength, habitat, diet, comment) VALUES($1, $2, $3, $4, $5, $6, $7, $8) RETURNING *;`
+function addFavRecipeHandler(req, res){
+    const recipe = req.body;
+    console.log(recipe);
+    const sql = `INSERT INTO favRecipes(title, readyInMinutes, summary, vegetarian, instructions, sourceUrl, image, comment) VALUES($1, $2, $3, $4, $5, $6, $7, $8) RETURNING *;`
 
-    const values = [fact.name, fact.image_link, fact.animal_type, fact.length_min, fact.length_max, fact.habitat, fact.diet, fact.comment];
+    const values = [recipe.title, recipe.readyInMinutes, recipe.summary, recipe.vegetarian, recipe.instructions, recipe.sourceUrl, recipe.image, recipe.comment];
     client.query(sql,values).then((data) => {
         res.status(201).json(data.rows);
     })
@@ -115,22 +117,9 @@ function addFavFactHandler(req, res){
     });
 };
 
-function getFavFactsHandler(req, res){
+function getFavRecipesHandler(req, res){
 
-    const sql = `SELECT * FROM favanimalfact`;
-
-    client.query(sql).then(data => {
-        return res.status(200).json(data.rows);
-    })
-    .catch(error => {
-        errorHandler(error, req,res);
-    });
-};
-
-function getFavFactHandler(req,res){
-    const id = req.params.id;
-
-    const sql = `SELECT * FROM favanimalfact WHERE id = ${id}`;
+    const sql = `SELECT * FROM favRecipes`;
 
     client.query(sql).then(data => {
         return res.status(200).json(data.rows);
@@ -140,12 +129,25 @@ function getFavFactHandler(req,res){
     });
 };
 
-function updateFavFactHandler(req, res){
+function getFavRecipeHandler(req,res){
     const id = req.params.id;
-    const fact = req.body;
 
-    const sql = `UPDATE favanimalfact SET name=$1, factImage=$2, animalType=$3, minLength=$4, maxLength=$5, habitat=$6, diet=$7, comment=$8 WHERE id=${id} RETURNING *;`;
-    const values = [fact.name, fact.image_link, fact.animal_type, fact.length_min, fact.length_max, fact.habitat, fact.diet, fact.comment];
+    const sql = `SELECT * FROM favRecipes WHERE id = ${id}`;
+
+    client.query(sql).then(data => {
+        return res.status(200).json(data.rows);
+    })
+    .catch(error => {
+        errorHandler(error, req,res);
+    });
+};
+
+function updateFavRecipeHandler(req, res){
+    const id = req.params.id;
+    const recipe = req.body;
+
+    const sql = `UPDATE favRecipes SET title=$1, readyInMinutes=$2, summary=$3, vegetarian=$4, instructions=$5, sourceUrl=$6, image=$7, comment=$8 WHERE id=${id} RETURNING *;`;
+    const values = [recipe.title, recipe.readyInMinutes, recipe.summary, recipe.vegetarian, recipe.instructions, recipe.sourceUrl, recipe.image, recipe.comment];
 
     client.query(sql, values).then(data => {
         return res.status(200).json(data.rows);
@@ -158,10 +160,10 @@ function updateFavFactHandler(req, res){
 
 };
 
-function deleteFavFactHandler(req , res){
+function deleteFavRecipeHandler(req , res){
     const id = req.params.id;
 
-    const sql = `DELETE FROM favanimalfact WHERE id=${id};`;
+    const sql = `DELETE FROM favRecipes WHERE id=${id};`;
 
     client.query(sql).then(() => {
         return res.status(204).json({});
