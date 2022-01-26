@@ -8,15 +8,15 @@ You will continue building on the last classes demos.
 Today you will build and end point for get, update and delete a specific record.
 
 
-1. Create an end point that take a get request with a specific id as params and return the details for the fact which has the same id:
+1. Create an end point that take a get request with a specific id as params and return the details for the recipe which has the same id:
 
 ```javascript
-app.get('/favFact/:id', getFavFactHandler);
+app.get('/favRecipe/:id', getFavRecipeHandler);
 
-function getFavFactHandler(req,res){
+function getFavRecipeHandler(req,res){
     const id = req.params.id;
 
-    const sql = `SELECT * FROM favanimalfact WHERE id = ${id}`;
+    const sql = `SELECT * FROM favRecipes WHERE id = ${id}`;
 
     client.query(sql).then(data => {
         return res.status(200).json(data.rows);
@@ -27,18 +27,17 @@ function getFavFactHandler(req,res){
 };
 ```
 
-2. Create an end point that take a put request with a specific id as params and return the details for the fact which has the same id:
+2. Create an end point that take a put request with a specific id as params and return the details for the recipe which has the same id:
 
 ```javascript
-app.put('/updateFavFact/:id', jsonParser,updateFavFactHandler);
+app.put('/updateFavRecipe/:id', jsonParser,updateFavRecipeHandler);
 
-
-function updateFavFactHandler(req, res){
+function updateFavRecipeHandler(req, res){
     const id = req.params.id;
-    const fact = req.body;
+    const recipe = req.body;
 
-    const sql = `UPDATE favanimalfact SET name=$1, factImage=$2, animalType=$3, minLength=$4, maxLength=$5, habitat=$6, diet=$7, comment=$8 WHERE id=${id} RETURNING *;`;
-    const values = [fact.name, fact.image_link, fact.animal_type, fact.length_min, fact.length_max, fact.habitat, fact.diet, fact.comment];
+    const sql = `UPDATE favRecipes SET title=$1, readyInMinutes=$2, summary=$3, vegetarian=$4, instructions=$5, sourceUrl=$6, image=$7, comment=$8 WHERE id=${id} RETURNING *;`;
+    const values = [recipe.title, recipe.readyInMinutes, recipe.summary, recipe.vegetarian, recipe.instructions, recipe.sourceUrl, recipe.image, recipe.comment];
 
     client.query(sql, values).then(data => {
         return res.status(200).json(data.rows);
@@ -50,17 +49,18 @@ function updateFavFactHandler(req, res){
     });
 
 };
+
 ```
 
 3. Create and end point that take a delete request and delete the record from database:
 
 ```javascript
-app.delete('/deleteFavFact/:id', deleteFavFactHandler);
+app.delete('/deleteFavRecipe/:id', deleteFavRecipeHandler);
 
-function deleteFavFactHandler(req , res){
+function deleteFavRecipeHandler(req , res){
     const id = req.params.id;
 
-    const sql = `DELETE FROM favanimalfact WHERE id=${id};`;
+    const sql = `DELETE FROM favRecipes WHERE id=${id};`;
 
     client.query(sql).then(() => {
         return res.status(204).json({});
