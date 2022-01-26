@@ -14,63 +14,66 @@ app.use(cors());
 
 const PORT = process.env.PORT || 3000;
 
+const apiKey = process.env.APIKEY;
+
+
 app.get('/', helloWorldHandler);
 
-app.get('/facts', AnimalFactsHandler);
+app.get('/recipes', recipesHandler);
 
-app.get('/factsNum', factsNumHandler);
+app.get('/searchRecipes', searchRecipesHandler);
 
 app.use('*', notFoundHandler);
 
 app.use(errorHandler)
 
-function AnimalFact(id, name, image_link, animal_type, length_min, length_max, habitat, diet){
+function Recipe(id, title, readyInMinutes, summary, vegetarian, instructions, sourceUrl, image){
     this.id = id;
-    this.name = name;
-    this.image_link = image_link;
-    this.animal_type = animal_type;
-    this.length_min = length_min;
-    this.length_max = length_max;
-    this.habitat = habitat;
-    this.diet = diet;
+    this.title = title;
+    this.readyInMinutes = readyInMinutes;
+    this.summary = summary;
+    this.vegetarian = vegetarian;
+    this.instructions = instructions;
+    this.sourceUrl = sourceUrl;
+    this.image = image;
 }
 
 function helloWorldHandler(req , res){
     return res.status(200).send("Hello World");
 }
 
-function AnimalFactsHandler(req , res){
-    let facts = []
-    
-    axios.get('https://zoo-animal-api.herokuapp.com/animals/rand/10')
+function recipesHandler(req , res){
+    let recipes = []
+    let numberOfReturnedData = 10; // 1 ==> 100
+    axios.get(`https://api.spoonacular.com/recipes/random?apiKey=${apiKey}&number=${numberOfReturnedData}`)
     .then(result => {
-        result.data.map(fact => {
-            let oneFact = new AnimalFact(fact.id, fact.name, fact.image_link, fact.animal_type, fact.length_min, fact.length_max, fact.habitat, fact.diet);
-            console.log(oneFact);
-            facts.push(oneFact);
+        result.data.recipes.map(recipe => {
+            let oneRecipe = new Recipe(recipe.id, recipe.title || '', recipe.readyInMinutes || '', recipe.summary || '', recipe.vegetarian || '', recipe.instructions || '', recipe.sourceUrl || '', recipe.image || '');
+            recipes.push(oneRecipe);
         })
-        return res.status(200).json(facts);
+        return res.status(200).json(recipes);
     })
     .catch(error => {
+        
         errorHandler(error, req,res);
     })
 }
 
-function factsNumHandler(req, res){
+function searchRecipesHandler(req, res){
     try{
-        console.log(req.query.number);
-        let facts = []
-        let factNum = req.query.number;
-        axios.get(`https://zoo-animal-api.herokuapp.com/animals/rand/${factNum}/`)
+        console.log(req.query.search);
+        let recipes = []
+        let query = req.query.search;
+        axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&query=${query}/`)
         .then(result => {
-            result.data.map(fact => {
-                let oneFact = new AnimalFact(fact.id, fact.name, fact.image_link, fact.animal_type, fact.length_min, fact.length_max, fact.habitat, fact.diet);
-                console.log(oneFact);
-                facts.push(oneFact);
+            result.data.results.map(recipe => {
+                let oneRecipe = new Recipe(recipe.id, recipe.title || '', recipe.readyInMinutes || '', recipe.summary || '', recipe.vegetarian || '', recipe.instructions || '', recipe.sourceUrl || '', recipe.image || '');
+                recipes.push(oneRecipe);
             })
-            return res.status(200).json(facts);
+            return res.status(200).json(recipes);
         })
         .catch(error => {
+            console.log(error);
             errorHandler(error, req,res);
         });
 

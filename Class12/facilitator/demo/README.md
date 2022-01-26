@@ -13,30 +13,43 @@ npm install axios dotenv
 ```javascript
 const axios = require('axios');
 ```
-3. Instead of reading from local JSON file you should send a get request to the [API](https://zoo-animal-api.herokuapp.com/) and reformat the data in the constructor then return the response as json
+3. Require dotenv and configure it 
 
 ```javascript
+require('dotenv').config();
+```
+4. Create .env file in the top level of the project and add the port and the api key (you can get one by register and you will find your key in the profile section):
 
-function AnimalFactsHandler(req , res){
-    let facts = []
-    
-    axios.get('https://zoo-animal-api.herokuapp.com/animals/rand/10')
+```
+APIKEY=//your key
+PORT=3000
+```
+
+5. Instead of reading from local JSON file you should send a get request to the [API](https://spoonacular.com/food-api/) and reformat the data in the constructor then return the response as json
+
+```javascript
+const apiKey = process.env.APIKEY;
+
+function recipesHandler(req , res){
+    let recipes = []
+    let numberOfReturnedData = 10; // 1 ==> 100
+    axios.get(`https://api.spoonacular.com/recipes/random?apiKey=${apiKey}&number=${numberOfReturnedData}`)
     .then(result => {
-        result.data.map(fact => {
-            let oneFact = new AnimalFact(fact.id, fact.name, fact.image_link, fact.animal_type, fact.length_min, fact.length_max, fact.habitat, fact.diet);
-            console.log(oneFact);
-            facts.push(oneFact);
+        result.data.recipes.map(recipe => {
+            let oneRecipe = new Recipe(recipe.id, recipe.title || '', recipe.readyInMinutes || '', recipe.summary || '', recipe.vegetarian || '', recipe.instructions || '', recipe.sourceUrl || '', recipe.image || '');
+            recipes.push(oneRecipe);
         })
-        return res.status(200).json(facts);
+        return res.status(200).json(recipes);
     })
     .catch(error => {
+        
         errorHandler(error, req,res);
     })
 }
 
 ```
 
-4. Build a function to handel errors 
+6. Build a function to handel errors 
 
 ```javascript
 app.use(errorHandler);
@@ -50,27 +63,28 @@ function errorHandler(error,req,res){
 }
 ```
 
-5. The Animal facts API is giving you the ability to control the number of returned results so lets make our api do that in another end point (you will use query):
+
+7. The Spoonacular API is giving you the ability to search for a recipe so lets make our api do that in another end point (you will use query):
 
 ```javascript
-app.get('/factsNum', factsNumHandler);
+app.get('/searchRecipes', searchRecipesHandler);
 
 
-function factsNumHandler(req, res){
+function searchRecipesHandler(req, res){
     try{
-        console.log(req.query.number);
-        let facts = []
-        let factNum = req.query.number;
-        axios.get(`https://zoo-animal-api.herokuapp.com/animals/rand/${factNum}/`)
+        console.log(req.query.search);
+        let recipes = []
+        let query = req.query.search;
+        axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&query=${query}/`)
         .then(result => {
-            result.data.map(fact => {
-                let oneFact = new AnimalFact(fact.id, fact.name, fact.image_link, fact.animal_type, fact.length_min, fact.length_max, fact.habitat, fact.diet);
-                console.log(oneFact);
-                facts.push(oneFact);
+            result.data.results.map(recipe => {
+                let oneRecipe = new Recipe(recipe.id, recipe.title || '', recipe.readyInMinutes || '', recipe.summary || '', recipe.vegetarian || '', recipe.instructions || '', recipe.sourceUrl || '', recipe.image || '');
+                recipes.push(oneRecipe);
             })
-            return res.status(200).json(facts);
+            return res.status(200).json(recipes);
         })
         .catch(error => {
+            console.log(error);
             errorHandler(error, req,res);
         });
 
@@ -82,17 +96,7 @@ function factsNumHandler(req, res){
 }
 ```
 
-6. Require dotenv and configure it 
 
-```javascript
-require('dotenv').config();
-```
-
-7. Create .env file in the top level of the project and add the port to it:
-
-```
-PORT=3000
-```
 
 8. Read the port from the .env instead of adding it directly to the listening function:
 
