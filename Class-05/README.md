@@ -1,4 +1,4 @@
-# Class05
+# Class 05
 
 ## Outcomes:
 Students will be able to:

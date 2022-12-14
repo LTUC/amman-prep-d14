@@ -1,4 +1,4 @@
-# Class10
+# Class 10
 
 
 ## Outcomes:

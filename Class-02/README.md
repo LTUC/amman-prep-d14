@@ -1,4 +1,4 @@
-# Class02
+# Class 02
 
 ## Outcomes
 ### Students will learn :

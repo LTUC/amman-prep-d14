@@ -1,4 +1,4 @@
-# Class03
+# Class 03
 
 ## Outcomes:
 Students will be able to:

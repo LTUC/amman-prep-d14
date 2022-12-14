@@ -1,4 +1,4 @@
-# Class01
+# Class 01
 
 ## Outcomes
 Students will:

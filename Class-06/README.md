@@ -1,4 +1,4 @@
-# Class06
+# Class 06
 
 ## Outcomes:
 Students will be able to:
