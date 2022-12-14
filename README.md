@@ -4,8 +4,8 @@
 
 | First Week: HTML, CSS, Javascript   | Second Week: Javascript | Third Week: Backend Development | Forth Week: Frontend Development |
 |---------------------------------------------------|--------------------------------------------------|-----------------------------------------------|---------------------------------------------|
-| [Day 01: Git, GitHub and, Terminal](Day01/README.md)       | [Day 06: Javascript: Loops and Functions](./Day06/README.md) | [Day 11: Building a Server](Day11/README.md)            | [Day 16: React: Introduction ](./Day16/README.md) |
-| [Day 02: GitHub Branches and Wireframes](./Day02/README.md)      | [Day 07: Javascript: Hoisting, Objects and, DOM](./Day07/README.md)| [Day 12: 3rd Party API](./Day12/README.md)         | [Day 17: Routing, Conditional Rendering, Events and, State](./Day17/README.md)     |
-| [Day 03: HTML](./Day03/README.md)             | [Day 08: Javascript: DOM Manipulation and Events](./Day08/README.md) | [Day 13: Databases](./Day13/README.md)    | [Day 18: Hooks and Linking Frontend with Backend](./Day18/README.md)  |
-| [Day 04: CSS](./Day04/README.md)         | [Day 09: Local Storage and JSON](./Day09/README.md)    | [Day 14: CRUD](./Day14/README.md) | [Day 19: Frontend Deployment](./Day19/README.md)    |
-| [Day 05: Javascript: Introduction](./Day05/README.md)                     | [Day 10: Recursive Function and Regex ](./Day10/README.md) | [Day 15: Backend Deployment](./Day15/README.md)| [Day 20: OOP](./Day20/README.md)|
+| [Class 01: Git, GitHub and, Terminal](Class-01/README.md)       | [Class 06: Javascript: Loops and Functions](./Class-06/README.md) | [Class 11: Building a Server](Class-11/README.md)            | [Class 16: React: Introduction ](./Class-16/README.md) |
+| [Class 02: GitHub Branches and Wireframes](./Class-02/README.md)      | [Class 07: Javascript: Hoisting, Objects and, DOM](./Class-07/README.md)| [Class 12: 3rd Party API](./Class-12/README.md)         | [Class 17: Routing, Conditional Rendering, Events and, State](./Class-17/README.md)     |
+| [Class 03: HTML](./Class-03/README.md)             | [Class 08: Javascript: DOM Manipulation and Events](./Class-08/README.md) | [Class 13: Databases](./Class-13/README.md)    | [Class 18: Hooks and Linking Frontend with Backend](./Class-18/README.md)  |
+| [Class 04: CSS](./Class-04/README.md)         | [Class 09: Local Storage and JSON](./Class-09/README.md)    | [Class 14: CRUD](./Class-14/README.md) | [Class 19: Frontend Deployment](./Class-19/README.md)    |
+| [Class 05: Javascript: Introduction](./Class-05/README.md)                     | [Class 10: Recursive Function and Regex ](./Class-10/README.md) | [Class 15: Backend Deployment](./Class-15/README.md)| [Class 20: OOP](./Class-20/README.md)|
