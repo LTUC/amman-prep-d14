@@ -17,7 +17,7 @@ app.get('/recipes', recipesHandler);
 app.use('*', notFoundHandler);
 
 
-function Recipe(id, title, readyInMinutes, summary, vegetarian, instructions, sourceUrl, image){
+function Recipe(id, title, readyInMinutes, summary, vegetarian, instructions, sourceUrl, image) {
     this.id = id;
     this.title = title;
     this.readyInMinutes = readyInMinutes;
@@ -28,11 +28,11 @@ function Recipe(id, title, readyInMinutes, summary, vegetarian, instructions, so
     this.image = image;
 }
 
-function helloWorldHandler(req , res){
+function helloWorldHandler(req, res) {
     return res.status(200).send("Hello World");
 }
 
-function recipesHandler(req , res){
+function recipesHandler(req, res) {
     let recipes = []
     data.data.map(recipe => {
         let oneRecipe = new Recipe(recipe.id, recipe.title, recipe.readyInMinutes, recipe.summary, recipe.vegetarian, recipe.instructions, recipe.sourceUrl, recipe.image);
@@ -42,7 +42,7 @@ function recipesHandler(req , res){
     return res.status(200).json(recipes);
 }
 
-function notFoundHandler(request,response) { 
+function notFoundHandler(request, response) {
     response.status(404).send('huh????');
 }
 
