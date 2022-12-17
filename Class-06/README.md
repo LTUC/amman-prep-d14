@@ -3,11 +3,11 @@
 ## Outcomes:
 Students will be able to:
 - Creating and Accessing Arrays.
-- Understand and predict the behavior of loops (for, while, do while). And write valid loops.
+- Understand and predict the behavior of loops (for, while, do-while). And write valid loops.
 - Know the syntax for declaring and defining a function.
 - Know how to return a value from a function.
 - Know how to use parameters with function calls.
-- Understand the scope of variables, and the idea of global and local variables.
+- Understand the scope of variables and the idea of global and local variables.
 - Know when global variables should be used.
 
 ## Resources

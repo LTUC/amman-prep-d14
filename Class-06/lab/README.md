@@ -8,21 +8,21 @@ You are building a ToDo List Web Application, where the users can display their 
 
 ## Requirements:
 
-1. **Set up your Github Repository:**
+1. **Set up your GitHub Repository:**
    - Continue working on the same `todo-project` repo.
-   - Checkout a new branch called `todo-js2` for today's lab.
+   - Check out a new branch called `todo-js2` for today's lab.
    - Open it in VS code.
 
 2. **Continue adding functionality to your project**:
    - As a user, I would like to answer more questions, so you should add new three (Yes/No) questions.
-   - If the input was empty consider the answer is "invalid" string.
+   - If the input was empty consider the answer to be an "invalid" string.
    - Consider putting all the answers into an array.
    - Traverse the array and print the items on the console.
    - Confirm that your code is following the single responsibility rule. Each function should only do one thing.
    - All functions and variables should have a meaningful name (use camelCase).
 
 ## Submission Instructions:
-- When your work is complete and ready for submission, push to the `todo-js2` branch.
+- When your work is complete and ready for submission, push it to the `todo-js2` branch.
 - Create a pull request.
 - Deploy to the Github pages.
 - Submit the pull request and deployed version (Live URL) links.

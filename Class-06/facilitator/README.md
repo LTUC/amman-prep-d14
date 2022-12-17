@@ -2,7 +2,7 @@
 
 ## Arrays
 
-- How to store a list of something ? For example, numbers, colors, users, etc.
+- How to store a list of something? For example, numbers, colors, users, etc.
 - There exists a special data structure named `Array`, to store ordered collections.
 
 #### Arrays Declaration in JavaScript
@@ -63,7 +63,7 @@
   console.log(colors); // [1, 2, 3, 4, 5]
   ```
 
-- The JavaScript method `toString()` converts an array to a string of (comma separated) array values.
+- The JavaScript method `toString()` converts an array to a string of (comma-separated) array values.
 
   ```js
   let arr = [1, 2, 3, 4];
@@ -72,7 +72,7 @@
 
 ## Loops
 
-- How to run the same code over and over again ? For example, Print your name 100 times.
+- How to run the same code over and over again? For example, Print your name 100 times.
 - Loops are a way to repeat the same code multiple times.
 
 ### The "for" statement
@@ -88,7 +88,7 @@
   ```
 
   - `initialization` -> Run before the first execution on the loop. This expression is commonly used to create counters.
-  - `condition` ->Expression that is checked prior to the execution of every iteration.
+  - `condition` ->Expression that is checked before the execution of every iteration.
   - `final-expression` -> Expression that is run after every iteration. Usually used to **increment** a counter. But it can be used to decrement a counter too.
 
 - For loops are commonly used to count a certain number of iterations to repeat a statement. For example, print your name 100 times :
@@ -111,7 +111,7 @@
 
 ### The "while" statement
 
-- The `while` loop loops through a block of code as long as a specified condition is true. It usually used if number of iteration is **_not known_**.
+- The `while` loop loops through a block of code as long as a specified condition is true. It is usually used if the number of iterations is **_not known_**.
 - The `while` loop has the following syntax:
 
   ```js
@@ -120,9 +120,9 @@
   }
   ```
 
-  - If the `condition` becomes `false`, statement within the loop stops executing and control passes to the statement following the loop.
+  - If the `condition` becomes `false`, the statement within the loop stops executing and control passes to the statement following the loop.
 
-- For Example, print in console the number from 1 to 9:
+- For Example, print in the console the number from 1 to 9:
 
   ```js
   var i = 1;
@@ -136,8 +136,8 @@
 
 ### The "Do...while" statement
 
-- The `do...while` loop is closely related to `while` loop. In the do `while` loop, the condition is checked at the end of the loop.
-- The `do...while` loop has the following syntax:
+- The `do...while` loop is closely related to the `while` loop. In the do `while` loop, the condition is checked at the end of the loop.
+- The `do...while loop has the following syntax:
 
   ```js
   do {
@@ -182,15 +182,15 @@
 
 ### Anonymous Function
 
-- JavaScript allows us to define a function without any name. This unnamed function is called anonymous function. Anonymous function must be assigned to a variable.
-- Anonymous function is useful in passing callback function, creating closure or Immediately invoked function expression.
+- JavaScript allows us to define a function without any name. This unnamed function is called the anonymous function. The anonymous function must be assigned to a variable.
+- Anonymous function is useful in passing callback function, creating closure, or Immediately invoking function expression.
 
   ```js
   const square = function(number) { return number * number };
   var x = square(4); // x gets the value 16
   ```
 
-### what is arrow function?
+### what is the arrow function?
 
 - Arrow functions are a new way to write functions in JavaScript.
 - Arrow functions are always anonymous.
@@ -250,7 +250,7 @@
   // code here can NOT use x
   ```
 
-- `Local` variables are created when a function starts, and deleted when the function is completed.
+- `Local` variables are created when a function starts and deleted when the function is completed.
 
 ### Function Scope
 
@@ -278,7 +278,7 @@
 - Hoisting is JavaScript's default behavior of moving all declarations to the top.
 - Hoisting is a JavaScript mechanism where variables and functions declared in the code are moved to the top.
 
-> mote:Be carefully that only declaration gets hoisted NOT the initializations
+> mote: Be carefully that only the declaration gets hoisted NOT the initializations
 
 - One of the advantages of hoisting is that it lets you use a function before you declare it in your code.
 
