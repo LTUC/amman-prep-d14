@@ -3,9 +3,9 @@
 ## Outcomes
 
 - Understand hoisting in javascript.
-- Understand how object literals are structured in JavaScript, as well as how to access and reassign values/functionality to their properties and methods and `this` keyword.
+- Understand how object literals are structured in JavaScript, as well as how to access and reassign values/functionality to their properties and methods and the `this` keyword.
 - Understand how dot notation and bracket notation are used to access/reassign properties and methods in JavaScript objects.
-- Understand  interpolation expressions.
+- Understand interpolation expressions.
 - Be able to build and use a constructor function.
 - Be able to use the ‘prototype’ property to extend the inheritable properties and methods of a constructor function.
 - Introduction to DOM tree.

@@ -2,7 +2,7 @@
 
 ## Overview For Today
 
-Today's lecture will teach students how to build object literals, objects created using constructor function and an introduction to DOM.
+Today's lecture will teach students how to build object literals, objects created using the constructor function, and an introduction to DOM.
 
 ## Hoisting
 
@@ -45,9 +45,9 @@ Today's lecture will teach students how to build object literals, objects create
 
 ## Object Literals
 
-- What object is in real life, example (Human, Car ...).
+- What object is in real life, for example (a Human, Car ...).
 - Object in Javascript
-  - Object Definition, properties and methods.
+  - Object Definition, properties, and methods.
   - Example
 
     ```javascript
@@ -62,7 +62,7 @@ Today's lecture will teach students how to build object literals, objects create
       };
     ```
 
-    **Note: explain what  interpolation expressions is if it is not coverd before**
+    **Note: explain what  interpolation expressions are if it is not covered before**
 
   - Accessing object methods and properties.
   - Example
@@ -76,7 +76,7 @@ Today's lecture will teach students how to build object literals, objects create
 ## Constructor Function
 
 - What constructor is.
-    The previous example is limited. It only create single objects.
+    The previous example is limited. It only creates single objects.
     Sometimes we need a "blueprint" for creating many objects of the same "type".
 - Example:
 
@@ -145,9 +145,9 @@ Date objects, Array objects, and Person objects inherit from Object.prototype.
 
 ## How do I prep for today?
 
-- Prepare for code review. If you're nervous, find someone's code before lecture, and you can read it (and know what you'll talk about) before lecture begins.
-(put here how many demos and the names of them) the discussion of how to initialize a new project using the steps above.
-- Prepare a walk through of the directory structure for this lab
+- Prepare for code review. If you're nervous, find someone's code before the lecture, and you can read it (and know what you'll talk about) before the lecture begins.
+(put here how many demos and their names of them) the discussion of how to initialize a new project using the steps above.
+- Prepare a walk-through of the directory structure for this lab
 - Prepare a demo of testing.
 
 ## Lecture Main Topics
@@ -177,6 +177,6 @@ Today's lab is a simple one, but they might have a hard time with the amount of 
 
 Some basic code review questions:
 
-Does it work? What part of this is confusing? What could make it more readable? What could have more explanation? What could be broken into smaller pieces? What would make this easier for others to understand. How could this be more performant? Are there 'red flags' (Experience: Things you don't do often. Why did they do that?) Are 'bad inputs' accounted for? Are there missing test cases? Is it documented?
+Does it work? What part of this is confusing? What could make it more readable? What could have more explanation? What could be broken into smaller pieces? What would make this easier for others to understand? How could this be more performant? Are there 'red flags' (Experience: Things you don't do often. Why did they do that?) Are 'bad inputs' accounted for? Are there missing test cases? Is it documented?
 
-I found the best code reviews consisted of the students describing their code to each other, explaining why they choose those methods, and even helping teach the subjects of the labs.
+I found the best code reviews consisted of the students describing their code to each other, explaining why they choose those methods and even helping teach the subjects of the labs.
