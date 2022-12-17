@@ -2,17 +2,17 @@
 
 ## Javascript Intro
 
-- What is Javascript.
-- What is the difference between the Interpreted and Compiled Programming Languages.
+- What is Javascript?
+- What is the difference between the Interpreted and Compiled Programming Languages?
 
 ## JavaScript Popup Boxes
 
-- What is popup boxes in JS (Alert, Prompt and Confirm boxes) and how to use it.
+- What are popup boxes in JS (Alert, Prompt and Confirm boxes), and how to use them?
 
   - Example:
 
     ```javascript
-    alert("This is alert message.");
+    alert("This is an alert message.");
 
     let input = prompt("Enter your mail here : ");
     console.log("Your mail is : ", input);
@@ -23,7 +23,7 @@
 
 ## JavaScript Data Types
 
-- What is all JS data types (Number, String, Boolean ..).
+- What are all JS data types (Number, String, Boolean ..).
 - Show examples for each data type such as the example below.
 
   - Number Example:
@@ -45,7 +45,7 @@
     let s4 = s1 + " " + s2; // this is a string this is also a string
     ```
 
-    **Note: explain the string concatenation and there is a double, single quotes and backtick**
+    **Note: explain the string concatenation and there is a double, and single quotes and backtick**
 
   - Boolean Example:
 
@@ -75,21 +75,21 @@
     let value = null;
     ```
 
-    **Note: explain the NULL data type and give examples on it**
+    **Note: explain the NULL data type and give examples of it**
 
   - Undefined Example:
     ```javascript
     let myObject = { first: "123", second: 456, third: true };
     myObject.fourth; // Undefined
     ```
-    **Note: explain the undefined data type and give examples on it**
+    **Note: explain the undefined data type and give examples of it**
 
 ## JavaScript Comparison and Logical Operators
 
-- What is the difference between Comparison and Logical Operators.
+- What is the difference between Comparison and Logical Operators?
 - Why we use the Operators in programming languages.
 
-  - Examples on Comparison Operators:
+  - Examples of Comparison Operators:
 
     - Equal to (==).
     - Equal value and equal type (===).
@@ -100,17 +100,17 @@
     - Greater than or equal to (>=).
     - Less than or equal to (<=).
 
-  - Examples on Logical Operators:
+  - Examples of Logical Operators:
     - And (&&).
     - Or (||).
     - Not (!).
 
 ## Conditions in Javascript
 
-- What is conditions in JS and why we use it.
+- What are the conditions in JS and why do we use them?
 - How we use the conditions.
 
-  - Examples on IF ELSE condition:
+  - Examples of IF ELSE conditions:
 
     ```javascript
     if (true) {
@@ -141,4 +141,4 @@
     }
     ```
 
-    **Note: explain the cases, breaks and the default**
+    **Note: explain the cases, breaks, and the default**
