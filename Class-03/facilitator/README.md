@@ -288,3 +288,6 @@
 - planning before writing code
 - to make it simple and easy to use
 - understand there are best practices to write HTML with(header main body )
+- Also, use `section` and `article` elements instead of `div`, although `div` is wildely used, it is a non-semantic element.
+
+
