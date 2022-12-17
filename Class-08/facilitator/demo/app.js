@@ -17,7 +17,7 @@
 
 'use strict';
 
-function Drink(name,ingredients,isCold,isHot){
+function Drink(name, ingredients, isCold, isHot) {
   this.name = name;
   this.ingredients = ingredients;
   this.imagePath = `./images/${this.name}.PNG`;
@@ -26,11 +26,11 @@ function Drink(name,ingredients,isCold,isHot){
   this.price = 0;
 }
 
-Drink.prototype.calculatePrice = function(min,max){
-  this.price = getRandomNumber(min,max);
+Drink.prototype.calculatePrice = function (min, max) {
+  this.price = getRandomNumber(min, max);
 };
 
-Drink.prototype.render = function(){
+Drink.prototype.render = function () {
   const container = document.getElementById('drink');
   // create the element
   // append the element to it's parent
@@ -42,21 +42,20 @@ Drink.prototype.render = function(){
   const h4El = document.createElement('h4');
   divEl.appendChild(h4El);
   h4El.textContent = this.name;
-  
+
   const pEl = document.createElement('p');
   divEl.appendChild(pEl);
-  if(this.isCold && this.isHot) {
+  if (this.isCold && this.isHot) {
     pEl.textContent = `${this.name} is available Hot and Cold and it has the following ingredients : `;
-  }else if(this.isHot){
+  } else if (this.isHot) {
     pEl.textContent = `${this.name} is available only Hot and it has the following ingredients : `;
-  }else{
+  } else {
     pEl.textContent = `${this.name} is available only Cold and it has the following ingredients : `;
   }
 
   const ulEl = document.createElement('ul');
   divEl.appendChild(ulEl);
-  for(let i=0; i< this.ingredients.length; i++)
-  {
+  for (let i = 0; i < this.ingredients.length; i++) {
     const liEl = document.createElement('li');
     ulEl.appendChild(liEl);
     liEl.textContent = this.ingredients[i];
@@ -64,29 +63,29 @@ Drink.prototype.render = function(){
 
   const imgEl = document.createElement('img');
   divEl.appendChild(imgEl);
-  imgEl.setAttribute('src',this.imagePath);
+  imgEl.setAttribute('src', this.imagePath);
 };
 
 
-const espresso = new Drink('espresso',['espresso'],false,true);
-const latte = new Drink('latte',['espresso','milk','whipped milk'],true,true);
-const mocha = new Drink('mocha',['espresso milk', 'whipped cream','chocolate syrub'],true,true);
+const espresso = new Drink('espresso', ['espresso'], false, true);
+const latte = new Drink('latte', ['espresso', 'milk', 'whipped milk'], true, true);
+const mocha = new Drink('mocha', ['espresso milk', 'whipped cream', 'chocolate syrub'], true, true);
 
-espresso.calculatePrice(2,10);
+espresso.calculatePrice(2, 10);
 espresso.render();
 
-latte.calculatePrice(2,10);
+latte.calculatePrice(2, 10);
 latte.render();
 
-mocha.calculatePrice(2,10);
+mocha.calculatePrice(2, 10);
 mocha.render();
 
 
-function getRandomNumber(min,max){
+function getRandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-function addNewDrink(event){
+function addNewDrink(event) {
   event.preventDefault();
 
   let name = event.target.name.value;

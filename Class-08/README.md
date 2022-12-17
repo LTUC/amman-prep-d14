@@ -5,7 +5,7 @@
 Students will learn :
 
 - Understand how the browser represents an HTML document as an object that can be manipulated with JavaScript and use JavaScript to dynamically render data t in the DOM.
-- Be able to add an input form to an HTML document with properly structured HTML including the necessary `<form>`, `<input>`, `<fieldset>`,and `<label>` tags.
+- Be able to add an input form to an HTML document with properly structured HTML including the necessary `<form>`, `<input>`, `<fieldset>`, and `<label>` tags.
 - Understand how to use JavaScript events with the `.addEventListener()` method on a DOM element using either a named or anonymous event handler function.
 - Be able to add a new card to their home page storing, computing, and rendering data from the HTML form.
 
@@ -19,5 +19,5 @@ Students will learn :
 * DOM Document
 * DOM Elements
 * Events in JavaScript
-* Event index
+* Event Index
 * Event Listener

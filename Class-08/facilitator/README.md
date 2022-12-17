@@ -2,7 +2,7 @@
 
 ## Overview For Today
 
-Today's lecture will teach students DOM and DOM manipulation, forms, events and rendering data from the HTML form.
+Today's lecture will teach students DOM and DOM manipulation, forms, events, and rendering data from the HTML form.
 
 ## DOM
 
@@ -30,13 +30,13 @@ An HTML form is used to collect user input.
 
 ### The `<form>` Element
 
-The `<form>` element is a container for different types of input elements, such as: text fields, checkboxes, radio buttons, submit buttons, etc.
+The `<form>` element is a container for different types of input elements, such as text fields, checkboxes, radio buttons, submit buttons, etc.
 
 ### The `<input>` Element
 
 An `<input>` element can be displayed in many ways, depending on the type attribute.
 
-**Note for today's lab we will use text type input and submit input type, but the instructor can mention other types; radio, checkbox and number.**
+**Note for today's lab we will use text type input and submit input type, but the instructor can mention other types; radio, checkbox, and number.**
 
 ### The `<label>` Element
 
@@ -78,7 +78,7 @@ It needs the `value` attribute, which indicates what is sent on form submission.
 
 ## Events
 
-Events triggered by actions inside a HTML form.
+Events triggered by actions inside an HTML form.
 
 - "submit"
 - "click"
@@ -118,9 +118,9 @@ function handleForm(e){
 
 ## How do I prep for today?
 
-- Prepare for code review. If you're nervous, find someone's code before lecture, and you can read it (and know what you'll talk about) before lecture begins.
-(put here how many demos and the names of them) the discussion of how to initialize a new project using the steps above.
-- Prepare a walk through of the directory structure for this lab
+- Prepare for code review. If you're nervous, find someone's code before the lecture, and you can read it (and know what you'll talk about) before the lecture begins.
+(put here how many demos and their names of them) the discussion of how to initialize a new project using the steps above.
+- Prepare a walk-through of the directory structure for this lab
 - Prepare a demo of testing.
 
 ## Lecture Main Topics
@@ -144,6 +144,6 @@ Today's lab is not hard, but they might have a hard time with the amount of new 
 
 Some basic code review questions:
 
-Does it work? What part of this is confusing? What could make it more readable? What could have more explanation? What could be broken into smaller pieces? What would make this easier for others to understand. How could this be more performant? Are there 'red flags' (Experience: Things you don't do often. Why did they do that?) Are 'bad inputs' accounted for? Are there missing test cases? Is it documented?
+Does it work? What part of this is confusing? What could make it more readable? What could have more explanation? What could be broken into smaller pieces? What would make this easier for others to understand? How could this be more performant? Are there 'red flags' (Experience: Things you don't do often. Why did they do that?) Are 'bad inputs' accounted for? Are there missing test cases? Is it documented?
 
-I found the best code reviews consisted of the students describing their code to each other, explaining why they choose those methods, and even helping teach the subjects of the labs.
+I found the best code reviews consisted of the students describing their code to each other, explaining why they choose those methods and even helping teach the subjects of the labs.
