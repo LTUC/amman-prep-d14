@@ -8,12 +8,12 @@ Students will:
 * Learn what is Git 
 * Learn basic Git commands 
 * Learn what is Github
-* Learn the difference between Git and Github 
-* Learn Markdown language with its features .
+* Learn the difference between Git and GitHub 
+* Learn Markdown language with its features.
 * Clone a repository using SSH
 
 
-## Rescources
+## Resources
 * [Markdown Cheatsheet](https://www.markdownguide.org/basic-syntax/)
 * [Git Command Cheatsheet](https://www.plesk.com/blog/various/git-commands-cheat-sheet/)
 * [Terminal Command Cheat sheet: (Navigation and files)](https://www.codecademy.com/learn/learn-the-command-line/modules/learn-the-command-line-navigation/cheatsheet)
