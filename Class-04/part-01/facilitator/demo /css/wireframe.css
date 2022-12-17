@@ -1,46 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=The+Nautigal:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ribeye+Marrow&family=Righteous&family=The+Nautigal:wght@700&display=swap');
-*{
+
+* {
     font-family: 'Righteous', cursive;
 }
-body{
+
+body {
     background-color: rgba(209, 193, 193, 1);
 }
+
 header {
     background-color: black;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
-    
-    
+
+
 }
+
 header nav {
     float: right;
 }
-header div img{
- margin:10px 0 10px 20px;
-  float: left;
-  border-radius: 50%;
-  width:35px;
-  height: 35px;
+
+header div img {
+    margin: 10px 0 10px 20px;
+    float: left;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
 }
 
 
 
-header nav ul li{
+header nav ul li {
     display: inline-block;
     padding: 20px 10px;
     font-size: 20px;
-  /* background-color: blueviolet; to see the margin effect */
+    /* background-color: blueviolet; to see the margin effect */
     margin-right: 100px;
     font-family: 'Righteous', cursive;
 }
-a{
+
+a {
     text-decoration: none;
     color: blanchedalmond;
 }
-main div h1{
+
+main div h1 {
     padding: 30px;
     /* background-color: cadetblue; */
     color: blanchedalmond;
@@ -48,151 +55,173 @@ main div h1{
 }
 
 
-.container{
-    background-image:url(https://wallpapercave.com/wp/wp4728101.jpg);
+.container {
+    background-image: url(https://wallpapercave.com/wp/wp4728101.jpg);
 
     margin-top: 55px;
-    
+
     height: 400px;
- 
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
+
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* do not repeat the image */
+    background-size: cover;
+    /* Resize the background image to cover the entire container */
 
 }
-#med-sec{
-  display: flex;
-  
+
+#med-sec {
+    display: flex;
+
 }
 
-#img-part{
-   
+#img-part {
+
     margin: 40px 100px;
-  
+
 }
-#img-part img{
+
+#img-part img {
     width: 400px;
     height: 400px;
     border-radius: 20px;
 }
 
 
-#par-part{
-  
-    background-color:rgba(255, 168, 65, 1);
+#par-part {
+
+    background-color: rgba(255, 168, 65, 1);
     width: 600px;
     height: 400px;
     margin: 40px 100px;
     border-radius: 30px;
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2); /*3D Effect*/
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    /*3D Effect*/
 
-   
+
 }
 
-#par-part p{
-    font-family: 'Ribeye Marrow', cursive; 
+#par-part p {
+    font-family: 'Ribeye Marrow', cursive;
     font-size: 35px;
     padding: 30px;
 }
 
 /* table */
-#sub-title{
+#sub-title {
     margin: 20px 100px;
     font-size: 50px;
-   
+
 }
 
-#Table-sec{
-    background-color:rgba(255, 168, 65, 0.35);
+#Table-sec {
+    background-color: rgba(255, 168, 65, 0.35);
     margin: 20px 100px;
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2); /*3D Effect*/
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    /*3D Effect*/
 
 }
-table{
+
+table {
     width: 100%;
     text-align: center;
-    
+
 }
-th, td{
+
+th,
+td {
     border: 1px solid black;
 
 }
+
 th {
-  
+
     padding: 35px 20px;
-  }
+}
 
 td {
-    padding:15px;
-  }
-     
+    padding: 15px;
+}
+
 
 /* form  */
-#form-title{
-   
+#form-title {
+
     text-align: center;
     font-size: 50px;
 }
-#form{
+
+#form {
     /* background-color: darkgreen; */
-    margin:50px 400px;
+    margin: 50px 400px;
 }
-input[type=text],select,button{
+
+input[type=text],
+select,
+button {
     padding: 12px 20px;
     width: 100%;
-    box-sizing: border-box;/*to make its size fit to its container */
+    box-sizing: border-box;
+    /*to make its size fit to its container */
     border-radius: 4px;
     margin-top: 15px;
 }
-#date-inp{
+
+#date-inp {
     margin-top: 15px;
     display: flex;
 }
-input[type=date]{
+
+input[type=date] {
     padding: 12px 20px;
     width: 50%;
     border-radius: 4px
-    
-} 
+}
 
-button{
+button {
     background-color: rgba(205, 71, 42, 1);
     color: blanchedalmond;
 }
 
 
 /* footer */
-body{
+body {
     display: flex;
     flex-direction: column;
 }
-footer{
+
+footer {
     margin-top: auto;
     background-color: rgb(15, 15, 15);
     font-family: 'Righteous', cursive;
     padding: 10px;
-  
-    
-  
+
+
+
 }
-#footer-logo img{
+
+#footer-logo img {
     margin-top: 20px;
     float: left;
     border-radius: 50%;
-    width:45px;
+    width: 45px;
     height: 45px;
 }
-#social-media{
-   
+
+#social-media {
+
     color: blanchedalmond;
     float: right;
 
 }
+
 #social-media p {
-    margin: 0 20px 20px 0; 
+    margin: 0 20px 20px 0;
 }
-#copy-rights{
-  
+
+#copy-rights {
+
     color: blanchedalmond;
     margin-top: 25px;
     text-align: center;

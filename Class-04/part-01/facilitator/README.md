@@ -21,11 +21,11 @@
 
 ### what are CSS selectors?
 
-- CSS selectors are used to select HTML elements.
+- CSS selectors are used for selecting HTML elements.
   > Example:
 
 ```css
-CSS selectors are used to select HTML elements.
+CSS selectors are used for selecting HTML elements.
 Example:
 .class-name
 #id-name
@@ -77,7 +77,7 @@ hr
 ### what are external CSS and internal CSS and inline CSS?
 
 - External CSS is a CSS file that is linked to the HTML file.
-- Internal CSS is a CSS file embedded in the HTML file but in `style` tag.
+- Internal CSS is a CSS file embedded in the HTML file but in a `style` tag.
 - Inline CSS is a CSS code that is embedded in the HTML file but in the element that we want to style.
 
 > Example:
@@ -96,13 +96,13 @@ hr
 </style>
 
 // external CSS
-// we link the external CSS file to the HTML file and wrote css code in the external CSS file.
+// we link the external CSS file to the HTML file and wrote CSS code in the external CSS file.
 <link rel="stylesheet" href="style.css">
 
 
 ```
 
-### what is block and inline element?
+### what are block and inline elements?
 
 - A block-level element always starts on a new line and takes up the full width available (stretches out to the left and right as far as it can).
 
@@ -116,7 +116,7 @@ hr
 
 - An inline element does not start on a new line and only takes up as much width as necessary. - Example: - `<a>` - `<img>` - `<span>`
 
-### what is box model?
+### what is a box model?
 
 - Box model is the method used to calculate the dimensions of an element.
 - The box model is composed of the following properties:
@@ -176,7 +176,7 @@ p {
 }
 ```
 
-### what is absolute and relative position?
+### what is the absolute and relative position?
 
 - Absolute position means the element is positioned relative to the document.
 - Relative position means the element is positioned relative to its parent element.
@@ -264,7 +264,7 @@ div {
 }
 ```
 
-### what is grid system?
+### what is a grid system?
 
 - Grid system is a system of dividing the available space into equal-sized columns.
 
@@ -292,9 +292,9 @@ div {
 
 - Responsive design is a technique that allows us to design websites for different screen sizes.
 
-### pseudo classes?
+### pseudo-classes?
 
-- Pseudo classes are used to select elements based on certain conditions.
+- Pseudo-classes are used to select elements based on certain conditions.
 - Example:
   - `:hover`
   - `:focus`

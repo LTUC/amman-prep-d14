@@ -1,43 +1,50 @@
 li {
     border: 1px solid green;
-    display:inline;
-    width: 100px; /* will not work*/
-    padding: 10px; /*space bet txt & li element*/
-    margin: 20px;/*space bet elements*/
+    display: inline;
+    width: 100px;
+    /* will not work*/
+    padding: 10px;
+    /*space bet txt & li element*/
+    margin: 20px;
+    /*space bet elements*/
     text-align: center;
-  
-    
-  
-    
-   /* we can use inline-block
+
+
+
+
+    /* we can use inline-block
     display:inline-block;
     width: 100px;
     padding-top: 5px;
     padding-bottom: 5px; /* or padding : 0 5px 0 5px; */
 }
 
-div{
-    border : 1px solid green;
+div {
+    border: 1px solid green;
     text-align: center;
     font-size: 24px;
 }
+
 span {
-    border : 1px solid blue;
-    width : 200 px;/* width will be ignored with inline elements, to solve the prob we use padding   */
+    border: 1px solid blue;
+    width: 200 px;
+    /* width will be ignored with inline elements, to solve the prob we use padding   */
 }
+
 /*to remove the line under the elements in a tag*/
-a{
-text-decoration: none;
+a {
+    text-decoration: none;
 }
 
 
-#container{
+#container {
     position: relative;
     margin: 50px;
     padding: 10px;
     border: 2px solid purple;
 }
-.a{
+
+.a {
     /* position: static;default */
     /* position: fixed; */
     /* position: relative; */
@@ -48,15 +55,18 @@ text-decoration: none;
     background-color: purple; */
 
 }
-.b{
+
+.b {
     position: static;
     left: 50px;
     top: 50px;
 
 }
-.c{
+
+.c {
     display: block;
 }
+
 /* in css, elements are positioned in cretin ways  
 - static : default
 - fixed 
