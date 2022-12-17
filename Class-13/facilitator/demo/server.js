@@ -29,7 +29,7 @@ app.get('/recipes', recipesHandler);
 
 app.get('/searchRecipes', searchRecipesHandler);
 
-app.post('/addFavRecipe' ,jsonParser, addFavRecipeHandler);
+app.post('/addFavRecipe', jsonParser, addFavRecipeHandler);
 
 app.get('/favRecipes', getFavRecipesHandler);
 
@@ -38,7 +38,7 @@ app.use('*', notFoundHandler);
 
 app.use(errorHandler)
 
-function Recipe(id, title, readyInMinutes, summary, vegetarian, instructions, sourceUrl, image){
+function Recipe(id, title, readyInMinutes, summary, vegetarian, instructions, sourceUrl, image) {
     this.id = id;
     this.title = title;
     this.readyInMinutes = readyInMinutes;
@@ -51,84 +51,84 @@ function Recipe(id, title, readyInMinutes, summary, vegetarian, instructions, so
 
 
 
-function helloWorldHandler(req , res){
+function helloWorldHandler(req, res) {
     return res.status(200).send("Hello World");
 }
 
-function recipesHandler(req , res){
+function recipesHandler(req, res) {
     let recipes = []
     let numberOfReturnedData = 10; // 1 ==> 100
     axios.get(`https://api.spoonacular.com/recipes/random?apiKey=${apiKey}&number=${numberOfReturnedData}`)
-    .then(result => {
-        result.data.recipes.map(recipe => {
-            let oneRecipe = new Recipe(recipe.id, recipe.title || '', recipe.readyInMinutes || '', recipe.summary || '', recipe.vegetarian , recipe.instructions || '', recipe.sourceUrl || '', recipe.image || '');
-            recipes.push(oneRecipe);
-        })
-        return res.status(200).json(recipes);
-    })
-    .catch(error => {
-        
-        errorHandler(error, req,res);
-    })
-}
-
-function searchRecipesHandler(req, res){
-    try{
-        console.log(req.query.search);
-        let recipes = []
-        let query = req.query.search;
-        axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&query=${query}/`)
         .then(result => {
-            result.data.results.map(recipe => {
-                let oneRecipe = new Recipe(recipe.id, recipe.title || '', recipe.readyInMinutes || '', recipe.summary || '', recipe.vegetarian , recipe.instructions || '', recipe.sourceUrl || '', recipe.image || '');
+            result.data.recipes.map(recipe => {
+                let oneRecipe = new Recipe(recipe.id, recipe.title || '', recipe.readyInMinutes || '', recipe.summary || '', recipe.vegetarian, recipe.instructions || '', recipe.sourceUrl || '', recipe.image || '');
                 recipes.push(oneRecipe);
             })
             return res.status(200).json(recipes);
         })
         .catch(error => {
-            console.log(error);
-            errorHandler(error, req,res);
-        });
+
+            errorHandler(error, req, res);
+        })
+}
+
+function searchRecipesHandler(req, res) {
+    try {
+        console.log(req.query.search);
+        let recipes = []
+        let query = req.query.search;
+        axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&query=${query}/`)
+            .then(result => {
+                result.data.results.map(recipe => {
+                    let oneRecipe = new Recipe(recipe.id, recipe.title || '', recipe.readyInMinutes || '', recipe.summary || '', recipe.vegetarian, recipe.instructions || '', recipe.sourceUrl || '', recipe.image || '');
+                    recipes.push(oneRecipe);
+                })
+                return res.status(200).json(recipes);
+            })
+            .catch(error => {
+                console.log(error);
+                errorHandler(error, req, res);
+            });
 
     }
-    catch(error){
+    catch (error) {
 
-        errorHandler(error,req,res);
+        errorHandler(error, req, res);
     }
 }
 
-function addFavRecipeHandler(req, res){
+function addFavRecipeHandler(req, res) {
     const recipe = req.body;
     console.log(recipe);
     const sql = `INSERT INTO favRecipes(title, readyInMinutes, summary, vegetarian, instructions, sourceUrl, image, comment) VALUES($1, $2, $3, $4, $5, $6, $7, $8) RETURNING *;`
 
     const values = [recipe.title, recipe.readyInMinutes, recipe.summary, recipe.vegetarian, recipe.instructions, recipe.sourceUrl, recipe.image, recipe.comment];
-    client.query(sql,values).then((data) => {
+    client.query(sql, values).then((data) => {
         res.status(201).json(data.rows);
     })
-    .catch(error => {
-        console.log(error);
-        errorHandler(error, req,res);
-    });
+        .catch(error => {
+            console.log(error);
+            errorHandler(error, req, res);
+        });
 };
 
-function getFavRecipesHandler(req, res){
+function getFavRecipesHandler(req, res) {
 
     const sql = `SELECT * FROM favRecipes`;
 
     client.query(sql).then(data => {
         return res.status(200).json(data.rows);
     })
-    .catch(error => {
-        errorHandler(error, req,res);
-    });
+        .catch(error => {
+            errorHandler(error, req, res);
+        });
 };
 
-function notFoundHandler(request,response) { 
+function notFoundHandler(request, response) {
     response.status(404).send('huh????');
 }
 
-function errorHandler(error,req,res){
+function errorHandler(error, req, res) {
     const err = {
         status: 500,
         message: error
@@ -137,8 +137,8 @@ function errorHandler(error,req,res){
 };
 
 client.connect()
-.then(()=>{
-    app.listen(PORT, () =>
-    console.log(`listening on ${PORT}`)
-    );
-})
+    .then(() => {
+        app.listen(PORT, () =>
+            console.log(`listening on ${PORT}`)
+        );
+    })
