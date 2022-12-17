@@ -6,9 +6,9 @@
 - How to create pull requests.
 - How to merge. 
 - How to solve conflicts.
-- What is wireframe and why we use it.
-- How can we create a wireframe.   
-- Github pages. 
+- What is wireframe and why do we use it?
+- How can we create a wireframe?   
+- GitHub pages. 
 
 
 ## Resources:
