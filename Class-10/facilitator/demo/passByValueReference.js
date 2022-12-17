@@ -5,10 +5,10 @@ let person = {
 	gender: "male"
 }
 
-let newPerson = person; 
+let newPerson = person;
 
 newPerson.name = "Jane Doe" // "Tom Doe"
-console.log(newPerson) 
+console.log(newPerson)
 //{name: "Jane Doe", age: 27, gender: "male"}
 console.log(person)
 // {name: "Jane Doe", age: 27, gender: "male"}

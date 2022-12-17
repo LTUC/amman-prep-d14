@@ -1,10 +1,10 @@
 # Class 10 Guide
 
-The "Lecture Main Topics" section for each day can be used as a possible outline for a lecture. They're flows that have worked before, but feel free to deviate and do your own thing as fits your class.
+The "Lecture Main Topics" section for each day can be used as a possible outline for a lecture. They're flows that have worked before but feel free to deviate and do your own thing as fits your class.
 
 ## Overview of Today
 
-Today's lecture will teach students recursion and call stack, pass by value and by reference, Regex and its uses.
+Today's lecture will teach students recursion and call stack, pass by value and by reference, and Regex and its uses.
 
 ## Recursion:
 ### What is Recursion:
@@ -19,8 +19,8 @@ Today's lecture will teach students recursion and call stack, pass by value and 
 * Recursion needs more space complexity.
 
 ### Recursion Applications:
-* Recursion simplifies solving complex problem.
-* Many math functions cannot be expressed without its use.
+* Recursion simplifies solving a complex problem.
+* Many math functions cannot be expressed without their use.
 * Example: **Candy Crush** uses recursion to generate combinations of tiles.
 * Chess.
 * Also used in almost all searching algorithms.
@@ -32,14 +32,14 @@ Today's lecture will teach students recursion and call stack, pass by value and 
 * A call stack is a mechanism for an interpreter (like the JavaScript interpreter in a web browser) to keep track of its place in a script that calls multiple functions.
 * Recursive functions use “the call stack”.
 * When a program calls a function, that function goes on top of the call stack. 
-* This similar to a stack of books. You add things one at a time. Then, when you are ready to take something off, you always take off the top item.
+* This is similar to a stack of books. You add things one at a time. Then, when you are ready to take something off, you always take off the top item.
 * Understanding call stack is important for debugging.
 * The call stack is at the heart of this recursive function.
 
 ## What is the Stack:
 * Is stack a memory?
-* A stack is a special area of computer's memory which stores temporary variables created by a function. 
-* In stack, variables are declared, stored and initialized during runtime. 
+* A stack is a special area of a computer's memory that stores temporary variables created by a function. 
+* In stack, variables are declared, stored, and initialized during runtime. 
 * It is a temporary storage memory. When the computing task is complete, the memory of the variable will be automatically erased.
 
 ### Recursion Example Explained:
@@ -60,9 +60,9 @@ Today's lecture will teach students recursion and call stack, pass by value and 
 
 ## How do I prep for today?
 
-- Prepare for code review. If you're nervous, find someone's code before lecture, and you can read it (and know what you'll talk about) before lecture begins.
-- (put here how many demos and the names of them) the discussion of how to initialize a new project using the steps above.
-- Prepare a walk through of the directory structure for this lab
+- Prepare for code review. If you're nervous, find someone's code before the lecture, and you can read it (and know what you'll talk about) before the lecture begins.
+- (put here how many demos and their names of them) the discussion of how to initialize a new project using the steps above.
+- Prepare a walk-through of the directory structure for this lab
 - Prepare a demo of testing.
 
 
@@ -79,11 +79,11 @@ What part of this is confusing?
 What could make it more readable?
 What could have more explanation?
 What could be broken into smaller pieces?
-What would make this easier for others to understand.
+What would make this easier for others to understand?
 How could this be more performant?
 Are there 'red flags' (Experience: Things you don't do often. Why did they do that?)
 Are 'bad inputs' accounted for?
 Are there missing test cases?
 Is it documented?
 
-I found the best code reviews consisted of the students describing their code to each other, explaining why they choose those methods, and even helping teach the subjects of the labs.
+I found the best code reviews consisted of the students describing their code to each other, explaining why they choose those methods and even helping teach the subjects of the labs.

@@ -1,13 +1,13 @@
 // Calculate factorial with loop (without recursion)
-function fact(x){
+function fact(x) {
     if (x === 0 || x === 1) {
         return 1;
     }
     var result = x;
 
-    while(x>1){
-        result = result * (n-1);
-        n = n-1;   
+    while (x > 1) {
+        result = result * (n - 1);
+        n = n - 1;
     }
     return result;
 }
