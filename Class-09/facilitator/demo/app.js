@@ -21,12 +21,12 @@ Drink.prototype.calculatePrice = function (min, max) {
   this.price = getRandomNumber(min, max);
 };
 
-function render () {
+function render() {
   const container = document.getElementById('drink');
   container.innerHTML = '';
 
   for (let i = 0; i < Drink.allDrinks.length; i++) {
-    let drink =  Drink.allDrinks[i];
+    let drink = Drink.allDrinks[i];
 
     const divEl = document.createElement('div');
     container.appendChild(divEl);
@@ -56,7 +56,7 @@ function render () {
 
     const imgEl = document.createElement('img');
     divEl.appendChild(imgEl);
-    imgEl.setAttribute('src',drink.imagePath);
+    imgEl.setAttribute('src', drink.imagePath);
   }
 };
 
