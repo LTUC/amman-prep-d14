@@ -1,18 +1,18 @@
 # Lab 12:
 
 ## Problem domain:
-For today's lab you will continue working on the Movies-Library repository. You will send get requests to a 3rd party API and display data.
+For today's lab, you will continue working on the Movies-Library repository. You will send get requests to a 3rd party API and display data.
 
 ## Requirements:
-* Draw the web request response cycle for the task at hand
+* Draw the web request-response cycle for the task at hand
 * Create a new branch called `Lab12`
 * Install the required packages for this lab: `npm install axios dotenv`
 * Go to this website [THE MOVIE DB](https://developers.themoviedb.org/3):
-  - Create new account if you don’t have one
-  - Get your api key
+  - Create a new account if you don’t have one
+  - Get your API key
 
 * Create GET request to the 3rd party API for these endpoints:
- - `/trending` : Get the trending movies data from the Movie DB API [Link](https://api.themoviedb.org/3/trending/all/week?api_key=37ddc7081e348bf246a42f3be2b3dfd0&language=en-US)
+ - `/trending`: Get the trending movies data from the Movie DB API [Link](https://api.themoviedb.org/3/trending/all/week?api_key=37ddc7081e348bf246a42f3be2b3dfd0&language=en-US)
  -  your response should include the following info :
 ```json
 {
@@ -20,7 +20,7 @@ For today's lab you will continue working on the Movies-Library repository. You 
 "title": "Spider-Man: No Way Home",
 "release_date": "2021-12-15",
 "poster_path": "/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg",
-"overview": "Peter Parker is unmasked and no longer able to separate his normal life from the high-stakes of being a super-hero. When he asks for help from Doctor Strange the stakes become even more dangerous, forcing him to discover what it truly means to be Spider-Man."
+"overview": "Peter Parker is unmasked and no longer able to separate his normal life from the high stakes of being a superhero. When he asks for help from Doctor Strange the stakes become even more dangerous, forcing him to discover what it truly means to be Spider-Man."
 },
 ```
  - `/search`: Search for a movie name to get its information [Link](https://api.themoviedb.org/3/search/movie?api_key=668baa4bb128a32b82fe0c15b21dd699&language=en-US&query=The&page=2)
@@ -51,7 +51,7 @@ Movies-Library
 
 
 ## Submission Instructions:
-- When your work is complete and ready for submission, push to the `Lab12` branch.
+- When your work is complete and ready for submission, push it to the `Lab12` branch.
 - Create a pull request.
 - Submit the pull request link.
 - Merge `Lab12` with the main branch.
