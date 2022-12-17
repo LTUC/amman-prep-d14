@@ -12,19 +12,19 @@
 
 
 ## Code Challenges:
-| #                 | Link                                                            |
-| ----------------- | --------------------------------------------------------------- |
-| Code Challenge 06 | [Arrays](./Class-06/ProblemSolving/README.md)                   |
-| Code Challenge 07 | [Objects - Part01](./Class-07/ProblemSolving/README.md)         |
-| Code Challenge 08 | [Objects - Part02](./Class-08/ProblemSolving/README.md)         |
-| Code Challenge 09 | [forEach](./Class-09/ProblemSolving/README.md)                  |
-| Code Challenge 10 | [HackerRank - 01](./Class-10/ProblemSolving/README.md)          |
-| Code Challenge 11 | [map](./Class-11/ProblemSolving/README.md)                      |
-| Code Challenge 12 | [filter](./Class-12/ProblemSolving/README.md)                   |
-| Code Challenge 13 | [reduce](./Class-13/ProblemSolving/README.md)                   |
-| Code Challenge 14 | [String methods](./Class-14/ProblemSolving/README.md)           |
-| Code Challenge 15 | [HackerRank - 02](./Class-15/ProblemSolving/README.md)          |
-| Code Challenge 16 | [Combine methods](./Class-16/ProblemSolving/README.md)          |
-| Code Challenge 17 | [Recursion, String, Array](./Class-17/ProblemSolving/README.md) |
-| Code Challenge 18 | [String, Array](./Class-18/ProblemSolving/README.md)            |
-| Code Challenge 19 | [HackerRank - 03](./Class-19/ProblemSolving/README.md)          |
+| #                 | Link                                                               |
+| ----------------- | ------------------------------------------------------------------ |
+| Code Challenge 06 | [Arrays](./Class-06/Code-Challenge-06/README.md)                   |
+| Code Challenge 07 | [Objects - Part01](./Class-07/Code-Challenge-07/README.md)         |
+| Code Challenge 08 | [Objects - Part02](./Class-08/Code-Challenge-08/README.md)         |
+| Code Challenge 09 | [forEach](./Class-09/Code-Challenge-09/README.md)                  |
+| Code Challenge 10 | [HackerRank - 01](./Class-10/Code-Challenge-10/README.md)          |
+| Code Challenge 11 | [map](./Class-11/Code-Challenge-11/README.md)                      |
+| Code Challenge 12 | [filter](./Class-12/Code-Challenge-12/README.md)                   |
+| Code Challenge 13 | [reduce](./Class-13/Code-Challenge-13/README.md)                   |
+| Code Challenge 14 | [String methods](./Class-14/Code-Challenge-14/README.md)           |
+| Code Challenge 15 | [HackerRank - 02](./Class-15/Code-Challenge-15/README.md)          |
+| Code Challenge 16 | [Combine methods](./Class-16/Code-Challenge-16/README.md)          |
+| Code Challenge 17 | [Recursion, String, Array](./Class-17/Code-Challenge-17/README.md) |
+| Code Challenge 18 | [String, Array](./Class-18/Code-Challenge-18/README.md)            |
+| Code Challenge 19 | [HackerRank - 03](./Class-19/Code-Challenge-19/README.md)          |
