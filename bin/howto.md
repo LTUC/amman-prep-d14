@@ -28,3 +28,8 @@ git push origin main
 - DOTNET: `prep-course-dotnet-01`
 
 > The number for each course should be the next number of the previous prep course course, no matter of the track.
+
+
+## Emergency Backup:
+- Everything is safely backed up in [backup Branch](https://github.com/LTUC/prep-course/tree/backup)
+- Make sure you update this branch for any permanent changes in the prep courses.
