@@ -17,6 +17,9 @@ bash bin/shell.sh the_url_you_copied
 5. After you make sure all done:
 ```
 rm -rf bin
+git add .
+git commit -m "Delete bin folder"
+git push origin main
 ```
 ## Class Repo naming convention:
 - JavaScript: `prep-course-js-01`
