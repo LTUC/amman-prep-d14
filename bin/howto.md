@@ -1,4 +1,4 @@
-# Guide:
+# GitHub Guide:
 
 ## At the start of each course: 
 1. Clone this repo:
@@ -13,6 +13,10 @@ cd prep-course
 4. Run this command:
 ```
 bash bin/shell.sh the_url_you_copied
+```
+5. After you make sure all done:
+```
+rm -rf bin
 ```
 ## Class Repo naming convention:
 - JavaScript: `prep-course-js-01`
