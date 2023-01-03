@@ -1,8 +1,8 @@
 # Prep Course:
 
-## Course At a Glance:
+## Course Modules:
 
-| First Week: HTML, CSS, Javascript                                | Second Week: Javascript                                                   | Third Week: Backend Development                      | Forth Week: Frontend Development                                                    |
+| Module #1 : HTML, CSS, Javascript                                | Module #2 : Javascript                                                   | Module #3 : Backend Development                      | Module #4 : Frontend Development                                                    |
 | ---------------------------------------------------------------- | ------------------------------------------------------------------------- | ---------------------------------------------------- | ----------------------------------------------------------------------------------- |
 | [Class 01: Git, GitHub and, Terminal](Class-01/README.md)        | [Class 06: Javascript: Loops and Functions](./Class-06/README.md)         | [Class 11: Building a Server](Class-11/README.md)    | [Class 16: React: Introduction ](./Class-16/README.md)                              |
 | [Class 02: GitHub Branches and Wireframes](./Class-02/README.md) | [Class 07: Javascript: Hoisting, Objects and, DOM](./Class-07/README.md)  | [Class 12: 3rd Party API](./Class-12/README.md)      | [Class 17: Routing, Conditional Rendering, Events and, State](./Class-17/README.md) |
@@ -28,3 +28,7 @@
 | Code Challenge 17 | [Recursion, String, Array](./Class-17/Code-Challenge-17/README.md) |
 | Code Challenge 18 | [String, Array](./Class-18/Code-Challenge-18/README.md)            |
 | Code Challenge 19 | [HackerRank - 03](./Class-19/Code-Challenge-19/README.md)          |
+
+
+## Course Timeline:
+[Schedule Link](https://alqudscollege-my.sharepoint.com/:x:/g/personal/advtech_ltuc_com/EeV1QcYCko5CmyofLr9rydABIg2T8VcnyY2P-Ck9TuLhZw?e=ykeNZl)
