@@ -1,4 +1,4 @@
-# Class 19
+# Class 19 : Frontend Deployment
 
 ## Outcomes
 Students will learn :

@@ -1,4 +1,4 @@
-# Class 07
+# Class 07 : Javascript: Hoisting, Objects and, DOM
 
 ## Outcomes
 

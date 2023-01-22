@@ -1,4 +1,4 @@
-# Class 08
+# Class 08 : Javascript: DOM Manipulation and Events
 
 ## Outcomes
 

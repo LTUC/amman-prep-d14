@@ -1,4 +1,4 @@
-# Class 05
+# Class 05 : Javascript: Introduction
 
 ## Outcomes:
 Students will be able to:

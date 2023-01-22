@@ -1,4 +1,4 @@
-# Class 14
+# Class 14 : CRUD
 
 ## Outcomes:
 Students will be able to:

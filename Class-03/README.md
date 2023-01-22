@@ -1,4 +1,4 @@
-# Class 03
+# Class 03 : HTML
 
 ## Outcomes:
 Students will be able to:

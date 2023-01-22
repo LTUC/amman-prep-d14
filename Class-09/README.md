@@ -1,4 +1,4 @@
-# Class 09
+# Class 09 : Local Storage and JSON
 
 ## Outcomes
 

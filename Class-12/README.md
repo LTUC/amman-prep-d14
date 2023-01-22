@@ -1,4 +1,4 @@
-# Class12
+# Class12 : 3rd Party API
 
 ## Outcomes:
 Students will be able to:

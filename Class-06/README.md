@@ -1,4 +1,4 @@
-# Class 06
+# Class 06 : Javascript: Loops and Functions
 
 ## Outcomes:
 Students will be able to:

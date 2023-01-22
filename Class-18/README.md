@@ -1,4 +1,4 @@
-# Class 18
+# Class 18 : Hooks and Linking Frontend with Backend
 
 ## Outcomes
 

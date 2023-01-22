@@ -1,4 +1,4 @@
-# Class 16
+# Class 16 : React: Introduction
 
 ## Outcomes
 

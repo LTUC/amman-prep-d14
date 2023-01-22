@@ -1,4 +1,4 @@
-# Class 01
+# Class 01 :  Git, GitHub and, Terminal
 
 ## Outcomes
 Students will:

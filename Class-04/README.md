@@ -1,4 +1,4 @@
-# Class 04
+# Class 04 : CSS
 
 ## Outcomes:
 Students will be able to:

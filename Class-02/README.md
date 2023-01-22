@@ -1,4 +1,4 @@
-# Class 02
+# Class 02 : GitHub Branches and Wireframes
 
 ## Outcomes
 ### Students will learn :
