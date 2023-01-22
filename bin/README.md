@@ -9,10 +9,10 @@ git clone git@github.com:LTUC/prep-course.git
 ```
 cd prep-course
 ```
-3. Create an empty repo on [LTUC GitHub](https://github.com/LTUC) and copy its URL.
+3. Create an empty repo on [LTUC GitHub](https://github.com/LTUC) and copy its SSH URL.
 4. Run this command:
 ```
-bash bin/shell.sh the_url_you_copied
+bash bin/shell.sh the_ssh_url_you_copied
 ```
 5. After you make sure all done:
 ```
