@@ -22,10 +22,7 @@ git commit -m "Delete bin folder"
 git push origin main
 ```
 ## Class Repo naming convention:
-- JavaScript: `prep-course-js-01`
-- Python: `prep-course-py-01`
-- Java: `prep-course-java-01`
-- DOTNET: `prep-course-dotnet-01`
+- `asac-prep-d#`
 
 > The number for each course should be the next number of the previous prep course course, no matter of the track.
 
