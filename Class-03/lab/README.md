@@ -36,7 +36,11 @@ You are building a ToDo List Website, where the Users can display their tasks an
 
 ### The tree of the project should be like this:
 
-![Image](./assets/tree.png)
+```
+├── README.md
+├── index.html
+├── about.html 
+```
 
 ## Submission Instructions:
 - When your work is complete and ready for submission, push it to the `todo-html` branch.

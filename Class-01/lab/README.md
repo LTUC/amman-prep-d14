@@ -21,7 +21,7 @@ Today you will start setting things up by creating a GitHub account.
 3. **Skim the following resource:**
    - Read this resource carefully:
    [good-developer-mindset.](https://www.freecodecamp.org/news/learn-the-fundamentals-of-a-good-developer-mindset-in-15-minutes-81321ab8a682/)
-    - As the second paragraph in your README.md file, write what you learned from your reading. 
+    - As the second paragraph in your README.md file, write what you learned from today's lecture. 
    - Use different Markdown language features.
    - Do **A-C-P** (add, commit, push).
 
