@@ -46,7 +46,7 @@ Given n and k, return the kth permutation sequence.
 
 Example: 
 Input: n = 3, k = 3
-Output: "213" */
+Output: "213"  */
 
 function permutations(n, k) {
     let arr = [];
