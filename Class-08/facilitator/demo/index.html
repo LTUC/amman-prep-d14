@@ -16,15 +16,26 @@
 
         <section>
             <h2> Add a drink : </h2>
+            <!-- Forms in HTML are a way to collect information from users. -->
+            <!-- They allow users to enter data and submit it to a server for processing -->
 
             <form id="drinkForm">
+                <!-- The <fieldset> element in HTML forms is used to group related form elements together and create a border around them.  -->
+                <!-- it is often used in combination with the <legend> element, which provides a description or caption for the group of related form elements. -->
+                
+                <!-- By using the <fieldset> element, you can visually and semantically group together form fields that belong together. This can make forms more user-friendly and easier to understand for users who may have difficulty navigating complex forms. -->
                 <fieldset>
                     <legend>add new drink</legend>
+                    
+                    <!-- The for attribute in the <label> tag is used to associate a label with an input element in an HTML form. The for attribute specifies which form element the label is associated with, by referencing the id attribute of the form element. -->
+                    
+                    <!-- When the user clicks on a <label> element with a for attribute, the corresponding form element is focused or activated. This can be helpful for users with mobility or accessibility issues who may have difficulty clicking on small form elements. -->
                     <label for="name">Name:</label>
                     <input type="text" name="name" id="name" />
                     <br />
                     <br />
                     <label for="ingredients">Ingredients</label>
+                    <!-- The placeholder attribute is used in HTML form elements to provide a short hint or example of the expected input for the field. The placeholder text appears in the form field before the user enters any text, and disappears when the user starts typing. -->
                     <input type="text" name="ingredients" id="ingredients" placeholder="comma split " />
                     <br />
                     <br />

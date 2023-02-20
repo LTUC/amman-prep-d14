@@ -103,3 +103,15 @@ function addNewDrink(event) {
 
 let drinkForm = document.getElementById("drinkForm");
 drinkForm.addEventListener('submit', addNewDrink);
+
+// In JavaScript, events are actions or occurrences that happen in the browser, such as a user clicking on a button or a webpage finishing loading. These events can be detected and responded to using event handlers, which are functions that are executed when an event occurs.
+
+// There are many different types of events in JavaScript, including mouse events, keyboard events, form events, and document events. Some common examples of JavaScript events include:
+
+// click - occurs when a user clicks on an element
+// mouseover - occurs when a user moves their mouse over an element
+// keydown - occurs when a user presses a key on the keyboard
+// load - occurs when a webpage finishes loading
+
+
+// You can use event handlers in JavaScript to add interactivity and dynamic behavior to your web pages. For example, you can use a click event handler to perform a specific action when a user clicks on a button, or use a keydown event handler to respond to a specific key being pressed on the keyboard.
