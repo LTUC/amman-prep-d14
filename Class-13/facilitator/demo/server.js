@@ -8,20 +8,21 @@ require('dotenv').config();
 
 const axios = require('axios');
 
-const pg = require('pg');
+const pg = require('pg'); //1.
 
 const app = express();
+app.use(express.json()); //
 
 app.use(cors());
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000; //
 
 const apiKey = process.env.APIKEY;
 
-const client = new pg.Client(process.env.DATABASE_URL);
+const client = new pg.Client(process.env.DATABASE_URL); //2.
 
-var bodyParser = require('body-parser');
-var jsonParser = bodyParser.json();
+// var bodyParser = require('body-parser');
+// var jsonParser = bodyParser.json();
 
 app.get('/', helloWorldHandler);
 
@@ -29,7 +30,7 @@ app.get('/recipes', recipesHandler);
 
 app.get('/searchRecipes', searchRecipesHandler);
 
-app.post('/addFavRecipe', jsonParser, addFavRecipeHandler);
+app.post('/addFavRecipe', addFavRecipeHandler);
 
 app.get('/favRecipes', getFavRecipesHandler);
 
