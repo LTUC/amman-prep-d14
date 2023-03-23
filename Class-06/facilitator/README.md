@@ -278,7 +278,7 @@
 - Hoisting is JavaScript's default behavior of moving all declarations to the top.
 - Hoisting is a JavaScript mechanism where variables and functions declared in the code are moved to the top.
 
-> mote: Be carefully that only the declaration gets hoisted NOT the initializations
+> Note: Be carefully that only the declaration gets hoisted NOT the initializations
 
 - One of the advantages of hoisting is that it lets you use a function before you declare it in your code.
 
