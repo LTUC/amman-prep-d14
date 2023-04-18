@@ -83,7 +83,7 @@ describe("Test fibonacci", () => {
 });
 
 describe("Test permutations", () => {
-    test("It should return a list of possible combinations", () => {
+    test("It should return the kth element", () => {
         expect(permutations(3, 3)).toStrictEqual("213");
         expect(permutations(3, 0)).toStrictEqual(0);
     })
