@@ -49,9 +49,9 @@ Input: n = 3, k = 3
 Output: "213"  */
 
 function permutations(n, k) {
-    let arr = [];
+    let result;
     // Write you logic here. 
-    return arr
+    return result;
 };
 
 
@@ -83,8 +83,8 @@ describe("Test fibonacci", () => {
 });
 
 describe("Test permutations", () => {
-    test("It should return a list of possible combinations", () => {
-        expect(permutations(3, 3)).toStrictEqual(["123", "132", "213", "231", "312", "321"]);
-        expect(permutations(3, 0)).toStrictEqual([]);
+    test("It should return the kth element", () => {
+        expect(permutations(3, 3)).toStrictEqual("213");
+        expect(permutations(3, 0)).toStrictEqual(0);
     })
 });
