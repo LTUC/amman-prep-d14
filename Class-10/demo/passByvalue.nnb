@@ -1,0 +1,47 @@
+{
+    "cells": [
+        {
+            "language": "javascript",
+            "source": [
+                "// pass by value\nlet x = 5\nlet y = 6\ny = x \ny"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "\u001b[33m5\u001b[39m"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "// passing by Reference\nlet student = {\n    name : 'abdelKareem',\n    age : 26\n}\nstudent\n\nlet studentTwo = student\nstudentTwo.name = 'ahmad'\n// studentTwo\n// console.log(student)\n// console.log(studentTwo)"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "\u001b[32m'ahmad'\u001b[39m"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "// arr == arr2\nlet arr = [1,2,3]\nlet arr2 = [1,2,3]"
+            ],
+            "outputs": []
+        }
+    ]
+}
