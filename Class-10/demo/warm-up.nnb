@@ -1,0 +1,86 @@
+{
+    "cells": [
+        {
+            "language": "typescript",
+            "source": [
+                "// What is the output of following =>\n\nfunction  questionOne(){\n\n   return(\"ASAC\"*3)\n}\nquestionOne()\n\n"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "\u001b[33mNaN\u001b[39m"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "function questionTwo(){\n\n    //  return(1== true)\n\n\t// return(\"1\" == 1)\n}\nquestionTwo()"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "function questionThree(){\n\tlet x = [\"a\", 1, 9, 2]\n\t    // y = ['a', 1,9,2]\n\tlet y  = x\n\ty[3] = 2\n\tx[2] = 9\n    console.log(x)\n    console.log(y)\n\n}\nquestionThree()\n"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "[ 'a', 1, 9, 2 ]",
+                                "[ 'a', 1, 9, 2 ]",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// Is arr1 == arr2 \nlet arr = [2,3,4]\nlet arrTwo = [2,3,4]\nconsole.log(arr[0] == arrTwo[0])\n"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "true",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "// Do you know what do we call this function \n\nfunction guess() {\n    if(condition) {\n        // stop calling itself\n        //...\n    } else {\n        guess();\n    }\n}\n\n\n// what do we call this expression \nlet string = 'prep d10 will learn new thing today'\nlet r = /prep/\nr.test(string)"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "\u001b[33mtrue\u001b[39m"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
