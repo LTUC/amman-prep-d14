@@ -1,0 +1,32 @@
+.parent-div{
+    width: 2000px;
+    height: 2000px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+    /* gap: 10px; */
+
+}
+.parent-div div{
+    /* display: inline-block; */
+    /* display: inline; */
+    /* float:right; */
+    width: 250px;
+    height: 250px;
+    /* margin-right: 10px; */
+    
+}
+.div-1{
+    background-color: antiquewhite;
+}
+.div-2{
+    background-color: aqua;
+}
+
+.div-3{
+    background-color: blue;
+}
+.div-4{
+    background-color: blueviolet;
+}
