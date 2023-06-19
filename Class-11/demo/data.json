@@ -1,0 +1,66 @@
+[
+  {
+    "country": "Jordan",
+    "alpha_two_code": "JO",
+    "name": "Al al-Bayt University",
+    "state-province": null,
+    "domains": ["aabu.edu.jo"],
+    "web_pages": ["http://www.aabu.edu.jo/"]
+  },
+  {
+    "country": "Jordan",
+    "alpha_two_code": "JO",
+    "name": "Al Hussein Bin Talal University",
+    "state-province": null,
+    "domains": ["ahu.edu.jo"],
+    "web_pages": ["http://www.ahu.edu.jo/"]
+  },
+  {
+    "country": "Jordan",
+    "alpha_two_code": "JO",
+    "name": "Al-Zaytoonah University",
+    "state-province": null,
+    "domains": ["alzaytoonah.edu.jo"],
+    "web_pages": ["http://www.alzaytoonah.edu.jo/"]
+  },
+  {
+    "country": "Jordan",
+    "alpha_two_code": "JO",
+    "name": "Al-Ahliyya Amman University",
+    "state-province": null,
+    "domains": ["ammanu.edu.jo"],
+    "web_pages": ["http://www.ammanu.edu.jo/"]
+  },
+  {
+    "country": "Jordan",
+    "alpha_two_code": "JO",
+    "name": "Applied Science University",
+    "state-province": null,
+    "domains": ["asu.edu.jo"],
+    "web_pages": ["http://www.asu.edu.jo/"]
+  },
+  {
+    "country": "Jordan",
+    "alpha_two_code": "JO",
+    "name": "Al-Balqa Applied University",
+    "state-province": null,
+    "domains": ["bau.edu.jo"],
+    "web_pages": ["http://www.bau.edu.jo/"]
+  },
+  {
+    "country": "Jordan",
+    "alpha_two_code": "JO",
+    "name": "Yarmouk University",
+    "state-province": null,
+    "domains": ["yu.edu.jo"],
+    "web_pages": ["http://www.yu.edu.jo/"]
+  },
+  {
+    "country": "Jordan",
+    "alpha_two_code": "JO",
+    "name": "Zarka Private University",
+    "state-province": null,
+    "domains": ["zpu.edu.jo"],
+    "web_pages": ["http://www.zpu.edu.jo/"]
+  }
+]
