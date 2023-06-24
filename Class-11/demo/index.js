@@ -2,117 +2,105 @@
 
 const express = require("express");
 const uniData = require("./data.json"); // improting data from json file and save it in a variable
-const cors = require("cors");   
+const cors = require("cors");
+const axios = require("axios");
+const e = require("express");
 
 const app = express();
+require("dotenv").config(); // import dotenv from node_modules
 
 //middlewares
-app.use(cors());  // who can touch the server 
-
-//routes
-
-// let arr = [
-//   {
-//     country: "Jordan",
-//     alpha_two_code: "JO",
-//     name: "Al al-Bayt University",
-//     "state-province": null,
-//     domains: ["aabu.edu.jo"],
-//     web_pages: ["http://www.aabu.edu.jo/"],
-//   },
-//   {
-//     country: "Jordan",
-//     alpha_two_code: "JO",
-//     name: "Al Hussein Bin Talal University",
-//     "state-province": null,
-//     domains: ["ahu.edu.jo"],
-//     web_pages: ["http://www.ahu.edu.jo/"],
-//   },
-//   {
-//     country: "Jordan",
-//     alpha_two_code: "JO",
-//     name: "Al-Zaytoonah University",
-//     "state-province": null,
-//     domains: ["alzaytoonah.edu.jo"],
-//     web_pages: ["http://www.alzaytoonah.edu.jo/"],
-//   },
-//   {
-//     country: "Jordan",
-//     alpha_two_code: "JO",
-//     name: "Al-Ahliyya Amman University",
-//     "state-province": null,
-//     domains: ["ammanu.edu.jo"],
-//     web_pages: ["http://www.ammanu.edu.jo/"],
-//   },
-//   {
-//     country: "Jordan",
-//     alpha_two_code: "JO",
-//     name: "Applied Science University",
-//     "state-province": null,
-//     domains: ["asu.edu.jo"],
-//     web_pages: ["http://www.asu.edu.jo/"],
-//   },
-//   {
-//     country: "Jordan",
-//     alpha_two_code: "JO",
-//     name: "Al-Balqa Applied University",
-//     "state-province": null,
-//     domains: ["bau.edu.jo"],
-//     web_pages: ["http://www.bau.edu.jo/"],
-//   },
-//   {
-//     country: "Jordan",
-//     alpha_two_code: "JO",
-//     name: "Yarmouk University",
-//     "state-province": null,
-//     domains: ["yu.edu.jo"],
-//     web_pages: ["http://www.yu.edu.jo/"],
-//   },
-//   {
-//     country: "Jordan",
-//     alpha_two_code: "JO",
-//     name: "Zarka Private University",
-//     "state-province": null,
-//     domains: ["zpu.edu.jo"],
-//     web_pages: ["http://www.zpu.edu.jo/"],
-//   },
-// ];
-
-
+app.use(cors()); // who can touch the server
 
 //Routes
 
-// localhost:3000/home
+// app.use((req, res, next) => {
+//   if (req.query.pass == "1234") {
+//     next();
+//   } else {
+//     next("Wrong password please try again");
+//   }
+// });
+
+// localhost:3000/
 app.get("/", handleHome);
 
-// localhost:3000/test
+// app.post("/", (req,res)=>{res.send('welcome to our server using post')});
+
+// localhost:3000/allinfo
 app.get("/allinfo", handleAll);
+
+app.get("/allfromapi", async (req, res) => {
+  let cName = req.query.c;
+  let axiosResponse = await axios.get(
+    `${process.env.SECRET_API}/search?country=${cName}`
+  );
+  res.send(axiosResponse.data);
+});
+
+// app.get("/allfromapi",allfromapiHandler) ;
+// async function allfromapiHandler(){
+//   let cName = req.query.c
+//   let axiosResponse = await axios.get(`http://universities.hipolabs.com/search?country=${cName}`);
+//   res.send(axiosResponse.data);
+// }
 
 // localhost:3000/allnames
 app.get("/allnames", handleAllNames);
 
-// localhost:3000/any other routes
-app.get("*", handleNotFoud);
+app.get("/sumTwo", (req, res) => {
+  let userData = req.query;
+  console.log(userData);
+  let a = userData.first;
+  let b = userData.second;
+  let c = +a + +b;
+  res.send(`${c}`);
+});
 
+app.get("/marvel", async (req, res) => {
+  let x = await axios.get(
+    `http://gateway.marvel.com/v1/public/comics?ts=1&apikey=${process.env.PK}&hash=${process.env.HK}`
+  );
+  res.status(200).send(x.data);
+});
+
+// localhost:3000/any other routes
+// app.get("*", handleNotFoud);           // not the best practice to handle not found routes
+
+app.use((req, res, next) => {
+  res.status(404).send({
+    code: 404,
+    message: "Not Found",
+    extra: "you can visit only home, allinfo and allnames routes ",
+  });
+}); // Not Found bottom level of the server
+
+app.use((err, req, res, next) => {
+  res.status(500).send({
+    code: 500,
+    message: "Server Error",
+    ahamd: err,
+  });
+}); // bottom level of the server
 
 //Handlers Functions
 
 function handleHome(req, res) {
   console.log("user trying to reach home ");
-  res.send(" welcome to our server");
+  res.send(" welcome to our server  using get");
 }
 
 function handleAll(req, res) {
   res.send(uniData);
 }
 
-function handleNotFoud(req, res) {
-  res.send({
-    code: 404,
-    message: "Not Found",
-    extra: "you can visit only home, allinfo and allnames routes ",
-  });
-}
+// function handleNotFoud(req, res) {
+//   res.status(404).send({
+//     code: 404,
+//     message: "Not Found",
+//     extra: "you can visit only home, allinfo and allnames routes ",
+//   });
+// }
 
 function handleAllNames(req, res) {
   let newArr = [];
@@ -122,7 +110,6 @@ function handleAllNames(req, res) {
   res.send(newArr);
 }
 
-
 // Starting the server handler
 
 app.listen(3000, startingLog);
@@ -130,3 +117,12 @@ app.listen(3000, startingLog);
 function startingLog(req, res) {
   console.log("Running at 3000");
 }
+
+//
+// app.get('/ahmad',checkNameHnadler,handeAhmad);
+
+// function checkNameHnadler(req,res,next){
+// if(req.query.ahmad=='ahmad enshasi'){
+//   next()
+// }
+// }
