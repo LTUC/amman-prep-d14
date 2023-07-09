@@ -12,7 +12,7 @@ You are building a Travel Destination application where you can see a list of th
 
 ### **Requirements**
 **Set up your Github Repository:**
-   - Create new repo called `Travel-Destination`.
+   - Create new repo called `travel-destination`.
    - Checkout a new branch called `class-16` for today's task.
    - Open it in VS code.
 
